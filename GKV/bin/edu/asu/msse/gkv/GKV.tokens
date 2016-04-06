@@ -1,2 +1,14 @@
-IDENTIFIER=4
-WHITESPACE=5
+T__8=8
+T__9=9
+T__10=10
+T__11=11
+T__12=12
+COMMA=4
+DATATYPE=5
+IDENTIFIER=6
+WHITESPAE=7
+'function'=8
+'returns'=9
+'uses'=10
+'{'=11
+'}'=12

@@ -12,6 +12,16 @@ options {
   package edu.asu.msse.gkv;
 }
 
-rule: IDENTIFIER+;
-IDENTIFIER : 'a'..'z'+;
-WHITESPACE: ' '+ {$channel = HIDDEN;};
+function :
+        'function' IDENTIFIER ('uses' DATATYPE IDENTIFIER (COMMA DATATYPE IDENTIFIER)*)? 'returns' DATATYPE
+        '{'
+             .*
+        '}'
+        ;
+
+DATATYPE : ('integer' | 'decimal' | 'boolean' | 'string');
+IDENTIFIER : ('a'..'z' | 'A'..'Z')('a'..'z' | 'A'..'Z' | '0'..'9')*;
+WHITESPAE : (' ' | '\t' | '\r' | '\n' | '\f')+ {$channel = HIDDEN;};
+COMMA : ',';
+ 
+
