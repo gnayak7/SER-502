@@ -20,6 +20,9 @@ package edu.asu.msse.gkv;
  * @version April 2016
  */
 
+import java.io.IOException;
+
+import org.antlr.runtime.ANTLRFileStream;
 import org.antlr.runtime.ANTLRStringStream;
 import org.antlr.runtime.CharStream;
 import org.antlr.runtime.CommonTokenStream;
@@ -27,12 +30,13 @@ import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.TokenStream;
 
 public class Test {
-	public static void main(String[] args) throws RecognitionException {
-		CharStream charStream = new ANTLRStringStream("once upon a time");
+	public static void main(String[] args) throws RecognitionException, IOException {
+		ANTLRFileStream antlrFileStream = new ANTLRFileStream("Sample.gkv");
+		CharStream charStream = new ANTLRStringStream();
 		GKVLexer gkvLexer = new GKVLexer(charStream);
 		TokenStream tokenStream = new CommonTokenStream(gkvLexer);
 		GKVParser gkvParser = new GKVParser(tokenStream);
-		gkvParser.function();
+		gkvParser.program();
 		System.out.println("done");
 	}
 }

@@ -1,0 +1,6 @@
+function foo uses integer a, integer b return b {
+integer a
+decimal b
+a is 10
+b is 20
+}
