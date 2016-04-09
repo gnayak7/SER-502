@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g 2016-04-06 01:45:25
+// $ANTLR 3.5.2 /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g 2016-04-08 22:53:06
 
   package edu.asu.msse.gkv;
 
@@ -11,15 +11,24 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class GKVLexer extends Lexer {
 	public static final int EOF=-1;
-	public static final int T__8=8;
-	public static final int T__9=9;
-	public static final int T__10=10;
-	public static final int T__11=11;
-	public static final int T__12=12;
-	public static final int COMMA=4;
-	public static final int DATATYPE=5;
-	public static final int IDENTIFIER=6;
-	public static final int WHITESPAE=7;
+	public static final int T__16=16;
+	public static final int T__17=17;
+	public static final int T__18=18;
+	public static final int T__19=19;
+	public static final int T__20=20;
+	public static final int T__21=21;
+	public static final int ADDING_OPERATOR=4;
+	public static final int BOOLEAN=5;
+	public static final int COMMA=6;
+	public static final int COMPK_KEYWORDS=7;
+	public static final int DATATYPE=8;
+	public static final int DECIMAL=9;
+	public static final int FK_CALL=10;
+	public static final int FK_WITH=11;
+	public static final int IDENTIFIER=12;
+	public static final int INTEGER=13;
+	public static final int MULTIPLYING_OPERATOR=14;
+	public static final int NUMERIC_LITERAL=15;
 
 	// delegates
 	// delegators
@@ -36,15 +45,75 @@ public class GKVLexer extends Lexer {
 	}
 	@Override public String getGrammarFileName() { return "/home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g"; }
 
-	// $ANTLR start "T__8"
-	public final void mT__8() throws RecognitionException {
+	// $ANTLR start "T__16"
+	public final void mT__16() throws RecognitionException {
 		try {
-			int _type = T__8;
+			int _type = T__16;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:11:6: ( 'function' )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:11:8: 'function'
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:11:7: ( '(' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:11:9: '('
 			{
-			match("function"); 
+			match('('); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__16"
+
+	// $ANTLR start "T__17"
+	public final void mT__17() throws RecognitionException {
+		try {
+			int _type = T__17;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:12:7: ( ')' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:12:9: ')'
+			{
+			match(')'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__17"
+
+	// $ANTLR start "T__18"
+	public final void mT__18() throws RecognitionException {
+		try {
+			int _type = T__18;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:13:7: ( '\\n' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:13:9: '\\n'
+			{
+			match('\n'); 
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "T__18"
+
+	// $ANTLR start "T__19"
+	public final void mT__19() throws RecognitionException {
+		try {
+			int _type = T__19;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:14:7: ( 'and' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:14:9: 'and'
+			{
+			match("and"); 
 
 			}
 
@@ -55,17 +124,17 @@ public class GKVLexer extends Lexer {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "T__8"
+	// $ANTLR end "T__19"
 
-	// $ANTLR start "T__9"
-	public final void mT__9() throws RecognitionException {
+	// $ANTLR start "T__20"
+	public final void mT__20() throws RecognitionException {
 		try {
-			int _type = T__9;
+			int _type = T__20;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:12:6: ( 'returns' )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:12:8: 'returns'
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:15:7: ( 'is' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:15:9: 'is'
 			{
-			match("returns"); 
+			match("is"); 
 
 			}
 
@@ -76,17 +145,17 @@ public class GKVLexer extends Lexer {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "T__9"
+	// $ANTLR end "T__20"
 
-	// $ANTLR start "T__10"
-	public final void mT__10() throws RecognitionException {
+	// $ANTLR start "T__21"
+	public final void mT__21() throws RecognitionException {
 		try {
-			int _type = T__10;
+			int _type = T__21;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:13:7: ( 'uses' )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:13:9: 'uses'
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:16:7: ( 'or' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:16:9: 'or'
 			{
-			match("uses"); 
+			match("or"); 
 
 			}
 
@@ -97,110 +166,31 @@ public class GKVLexer extends Lexer {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "T__10"
+	// $ANTLR end "T__21"
 
-	// $ANTLR start "T__11"
-	public final void mT__11() throws RecognitionException {
+	// $ANTLR start "NUMERIC_LITERAL"
+	public final void mNUMERIC_LITERAL() throws RecognitionException {
 		try {
-			int _type = T__11;
+			int _type = NUMERIC_LITERAL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:14:7: ( '{' )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:14:9: '{'
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:40:16: ( ( DECIMAL | INTEGER ) )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:40:18: ( DECIMAL | INTEGER )
 			{
-			match('{'); 
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__11"
-
-	// $ANTLR start "T__12"
-	public final void mT__12() throws RecognitionException {
-		try {
-			int _type = T__12;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:15:7: ( '}' )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:15:9: '}'
-			{
-			match('}'); 
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "T__12"
-
-	// $ANTLR start "DATATYPE"
-	public final void mDATATYPE() throws RecognitionException {
-		try {
-			int _type = DATATYPE;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:22:10: ( ( 'integer' | 'decimal' | 'boolean' | 'string' ) )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:22:12: ( 'integer' | 'decimal' | 'boolean' | 'string' )
-			{
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:22:12: ( 'integer' | 'decimal' | 'boolean' | 'string' )
-			int alt1=4;
-			switch ( input.LA(1) ) {
-			case 'i':
-				{
-				alt1=1;
-				}
-				break;
-			case 'd':
-				{
-				alt1=2;
-				}
-				break;
-			case 'b':
-				{
-				alt1=3;
-				}
-				break;
-			case 's':
-				{
-				alt1=4;
-				}
-				break;
-			default:
-				NoViableAltException nvae =
-					new NoViableAltException("", 1, 0, input);
-				throw nvae;
-			}
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:40:18: ( DECIMAL | INTEGER )
+			int alt1=2;
+			alt1 = dfa1.predict(input);
 			switch (alt1) {
 				case 1 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:22:13: 'integer'
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:40:19: DECIMAL
 					{
-					match("integer"); 
+					mDECIMAL(); 
 
 					}
 					break;
 				case 2 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:22:25: 'decimal'
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:40:29: INTEGER
 					{
-					match("decimal"); 
-
-					}
-					break;
-				case 3 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:22:37: 'boolean'
-					{
-					match("boolean"); 
-
-					}
-					break;
-				case 4 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:22:49: 'string'
-					{
-					match("string"); 
+					mINTEGER(); 
 
 					}
 					break;
@@ -216,38 +206,28 @@ public class GKVLexer extends Lexer {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "DATATYPE"
+	// $ANTLR end "NUMERIC_LITERAL"
 
-	// $ANTLR start "IDENTIFIER"
-	public final void mIDENTIFIER() throws RecognitionException {
+	// $ANTLR start "DECIMAL"
+	public final void mDECIMAL() throws RecognitionException {
 		try {
-			int _type = IDENTIFIER;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:23:12: ( ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )* )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:23:14: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:41:17: ( ( ( '+' | '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )+ ) )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:41:18: ( ( '+' | '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )+ )
 			{
-			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
-				input.consume();
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:41:18: ( ( '+' | '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )+ )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:41:19: ( '+' | '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )+
+			{
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:41:19: ( '+' | '-' )?
+			int alt2=2;
+			int LA2_0 = input.LA(1);
+			if ( (LA2_0=='+'||LA2_0=='-') ) {
+				alt2=1;
 			}
-			else {
-				MismatchedSetException mse = new MismatchedSetException(null,input);
-				recover(mse);
-				throw mse;
-			}
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:23:35: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' )*
-			loop2:
-			while (true) {
-				int alt2=2;
-				int LA2_0 = input.LA(1);
-				if ( ((LA2_0 >= '0' && LA2_0 <= '9')||(LA2_0 >= 'A' && LA2_0 <= 'Z')||(LA2_0 >= 'a' && LA2_0 <= 'z')) ) {
-					alt2=1;
-				}
-
-				switch (alt2) {
+			switch (alt2) {
 				case 1 :
 					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:
 					{
-					if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+					if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
 						input.consume();
 					}
 					else {
@@ -258,37 +238,15 @@ public class GKVLexer extends Lexer {
 					}
 					break;
 
-				default :
-					break loop2;
-				}
 			}
 
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "IDENTIFIER"
-
-	// $ANTLR start "WHITESPAE"
-	public final void mWHITESPAE() throws RecognitionException {
-		try {
-			int _type = WHITESPAE;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:24:11: ( ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )+ )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:24:13: ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )+
-			{
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:24:13: ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )+
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:41:29: ( '0' .. '9' )+
 			int cnt3=0;
 			loop3:
 			while (true) {
 				int alt3=2;
 				int LA3_0 = input.LA(1);
-				if ( ((LA3_0 >= '\t' && LA3_0 <= '\n')||(LA3_0 >= '\f' && LA3_0 <= '\r')||LA3_0==' ') ) {
+				if ( ((LA3_0 >= '0' && LA3_0 <= '9')) ) {
 					alt3=1;
 				}
 
@@ -296,7 +254,7 @@ public class GKVLexer extends Lexer {
 				case 1 :
 					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:
 					{
-					if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||(input.LA(1) >= '\f' && input.LA(1) <= '\r')||input.LA(1)==' ' ) {
+					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
 					}
 					else {
@@ -315,7 +273,169 @@ public class GKVLexer extends Lexer {
 				cnt3++;
 			}
 
-			_channel = HIDDEN;
+			match('.'); 
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:41:43: ( '0' .. '9' )+
+			int cnt4=0;
+			loop4:
+			while (true) {
+				int alt4=2;
+				int LA4_0 = input.LA(1);
+				if ( ((LA4_0 >= '0' && LA4_0 <= '9')) ) {
+					alt4=1;
+				}
+
+				switch (alt4) {
+				case 1 :
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:
+					{
+					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
+						input.consume();
+					}
+					else {
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						recover(mse);
+						throw mse;
+					}
+					}
+					break;
+
+				default :
+					if ( cnt4 >= 1 ) break loop4;
+					EarlyExitException eee = new EarlyExitException(4, input);
+					throw eee;
+				}
+				cnt4++;
+			}
+
+			}
+
+			}
+
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "DECIMAL"
+
+	// $ANTLR start "INTEGER"
+	public final void mINTEGER() throws RecognitionException {
+		try {
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:42:17: ( ( ( '+' | '-' )? ( '0' .. '9' )+ ) )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:42:19: ( ( '+' | '-' )? ( '0' .. '9' )+ )
+			{
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:42:19: ( ( '+' | '-' )? ( '0' .. '9' )+ )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:42:20: ( '+' | '-' )? ( '0' .. '9' )+
+			{
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:42:20: ( '+' | '-' )?
+			int alt5=2;
+			int LA5_0 = input.LA(1);
+			if ( (LA5_0=='+'||LA5_0=='-') ) {
+				alt5=1;
+			}
+			switch (alt5) {
+				case 1 :
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:
+					{
+					if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
+						input.consume();
+					}
+					else {
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						recover(mse);
+						throw mse;
+					}
+					}
+					break;
+
+			}
+
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:42:30: ( '0' .. '9' )+
+			int cnt6=0;
+			loop6:
+			while (true) {
+				int alt6=2;
+				int LA6_0 = input.LA(1);
+				if ( ((LA6_0 >= '0' && LA6_0 <= '9')) ) {
+					alt6=1;
+				}
+
+				switch (alt6) {
+				case 1 :
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:
+					{
+					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
+						input.consume();
+					}
+					else {
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						recover(mse);
+						throw mse;
+					}
+					}
+					break;
+
+				default :
+					if ( cnt6 >= 1 ) break loop6;
+					EarlyExitException eee = new EarlyExitException(6, input);
+					throw eee;
+				}
+				cnt6++;
+			}
+
+			}
+
+			}
+
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "INTEGER"
+
+	// $ANTLR start "BOOLEAN"
+	public final void mBOOLEAN() throws RecognitionException {
+		try {
+			int _type = BOOLEAN;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:43:8: ( ( 'true' | 'false' ) )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:43:10: ( 'true' | 'false' )
+			{
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:43:10: ( 'true' | 'false' )
+			int alt7=2;
+			int LA7_0 = input.LA(1);
+			if ( (LA7_0=='t') ) {
+				alt7=1;
+			}
+			else if ( (LA7_0=='f') ) {
+				alt7=2;
+			}
+
+			else {
+				NoViableAltException nvae =
+					new NoViableAltException("", 7, 0, input);
+				throw nvae;
+			}
+
+			switch (alt7) {
+				case 1 :
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:43:11: 'true'
+					{
+					match("true"); 
+
+					}
+					break;
+				case 2 :
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:43:20: 'false'
+					{
+					match("false"); 
+
+					}
+					break;
+
+			}
+
 			}
 
 			state.type = _type;
@@ -325,15 +445,124 @@ public class GKVLexer extends Lexer {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "WHITESPAE"
+	// $ANTLR end "BOOLEAN"
+
+	// $ANTLR start "DATATYPE"
+	public final void mDATATYPE() throws RecognitionException {
+		try {
+			int _type = DATATYPE;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:44:9: ( ( 'integer' | 'decimal' | 'boolean' ) )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:44:11: ( 'integer' | 'decimal' | 'boolean' )
+			{
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:44:11: ( 'integer' | 'decimal' | 'boolean' )
+			int alt8=3;
+			switch ( input.LA(1) ) {
+			case 'i':
+				{
+				alt8=1;
+				}
+				break;
+			case 'd':
+				{
+				alt8=2;
+				}
+				break;
+			case 'b':
+				{
+				alt8=3;
+				}
+				break;
+			default:
+				NoViableAltException nvae =
+					new NoViableAltException("", 8, 0, input);
+				throw nvae;
+			}
+			switch (alt8) {
+				case 1 :
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:44:12: 'integer'
+					{
+					match("integer"); 
+
+					}
+					break;
+				case 2 :
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:44:24: 'decimal'
+					{
+					match("decimal"); 
+
+					}
+					break;
+				case 3 :
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:44:36: 'boolean'
+					{
+					match("boolean"); 
+
+					}
+					break;
+
+			}
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "DATATYPE"
+
+	// $ANTLR start "FK_CALL"
+	public final void mFK_CALL() throws RecognitionException {
+		try {
+			int _type = FK_CALL;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:46:8: ( 'call' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:46:9: 'call'
+			{
+			match("call"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "FK_CALL"
+
+	// $ANTLR start "FK_WITH"
+	public final void mFK_WITH() throws RecognitionException {
+		try {
+			int _type = FK_WITH;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:47:8: ( 'with' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:47:10: 'with'
+			{
+			match("with"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "FK_WITH"
 
 	// $ANTLR start "COMMA"
 	public final void mCOMMA() throws RecognitionException {
 		try {
 			int _type = COMMA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:25:7: ( ',' )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:25:9: ','
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:49:6: ( ',' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:49:8: ','
 			{
 			match(','); 
 			}
@@ -347,553 +576,561 @@ public class GKVLexer extends Lexer {
 	}
 	// $ANTLR end "COMMA"
 
-	@Override
-	public void mTokens() throws RecognitionException {
-		// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:8: ( T__8 | T__9 | T__10 | T__11 | T__12 | DATATYPE | IDENTIFIER | WHITESPAE | COMMA )
-		int alt4=9;
-		switch ( input.LA(1) ) {
-		case 'f':
+	// $ANTLR start "COMPK_KEYWORDS"
+	public final void mCOMPK_KEYWORDS() throws RecognitionException {
+		try {
+			int _type = COMPK_KEYWORDS;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:50:15: ( ( 'equalTo' | 'lessThan' | 'greaterThan' | 'lessThanOrEqualTo' | 'greateThanOrEqualTo' | 'notEqualTo' ) )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:50:17: ( 'equalTo' | 'lessThan' | 'greaterThan' | 'lessThanOrEqualTo' | 'greateThanOrEqualTo' | 'notEqualTo' )
 			{
-			int LA4_1 = input.LA(2);
-			if ( (LA4_1=='u') ) {
-				int LA4_13 = input.LA(3);
-				if ( (LA4_13=='n') ) {
-					int LA4_20 = input.LA(4);
-					if ( (LA4_20=='c') ) {
-						int LA4_27 = input.LA(5);
-						if ( (LA4_27=='t') ) {
-							int LA4_34 = input.LA(6);
-							if ( (LA4_34=='i') ) {
-								int LA4_41 = input.LA(7);
-								if ( (LA4_41=='o') ) {
-									int LA4_47 = input.LA(8);
-									if ( (LA4_47=='n') ) {
-										int LA4_53 = input.LA(9);
-										if ( ((LA4_53 >= '0' && LA4_53 <= '9')||(LA4_53 >= 'A' && LA4_53 <= 'Z')||(LA4_53 >= 'a' && LA4_53 <= 'z')) ) {
-											alt4=7;
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:50:17: ( 'equalTo' | 'lessThan' | 'greaterThan' | 'lessThanOrEqualTo' | 'greateThanOrEqualTo' | 'notEqualTo' )
+			int alt9=6;
+			switch ( input.LA(1) ) {
+			case 'e':
+				{
+				alt9=1;
+				}
+				break;
+			case 'l':
+				{
+				int LA9_2 = input.LA(2);
+				if ( (LA9_2=='e') ) {
+					int LA9_5 = input.LA(3);
+					if ( (LA9_5=='s') ) {
+						int LA9_7 = input.LA(4);
+						if ( (LA9_7=='s') ) {
+							int LA9_9 = input.LA(5);
+							if ( (LA9_9=='T') ) {
+								int LA9_11 = input.LA(6);
+								if ( (LA9_11=='h') ) {
+									int LA9_13 = input.LA(7);
+									if ( (LA9_13=='a') ) {
+										int LA9_15 = input.LA(8);
+										if ( (LA9_15=='n') ) {
+											int LA9_18 = input.LA(9);
+											if ( (LA9_18=='O') ) {
+												alt9=4;
+											}
+
+											else {
+												alt9=2;
+											}
+
 										}
 
 										else {
-											alt4=1;
+											int nvaeMark = input.mark();
+											try {
+												for (int nvaeConsume = 0; nvaeConsume < 8 - 1; nvaeConsume++) {
+													input.consume();
+												}
+												NoViableAltException nvae =
+													new NoViableAltException("", 9, 15, input);
+												throw nvae;
+											} finally {
+												input.rewind(nvaeMark);
+											}
 										}
 
 									}
 
 									else {
-										alt4=7;
+										int nvaeMark = input.mark();
+										try {
+											for (int nvaeConsume = 0; nvaeConsume < 7 - 1; nvaeConsume++) {
+												input.consume();
+											}
+											NoViableAltException nvae =
+												new NoViableAltException("", 9, 13, input);
+											throw nvae;
+										} finally {
+											input.rewind(nvaeMark);
+										}
 									}
 
 								}
 
 								else {
-									alt4=7;
+									int nvaeMark = input.mark();
+									try {
+										for (int nvaeConsume = 0; nvaeConsume < 6 - 1; nvaeConsume++) {
+											input.consume();
+										}
+										NoViableAltException nvae =
+											new NoViableAltException("", 9, 11, input);
+										throw nvae;
+									} finally {
+										input.rewind(nvaeMark);
+									}
 								}
 
 							}
 
 							else {
-								alt4=7;
+								int nvaeMark = input.mark();
+								try {
+									for (int nvaeConsume = 0; nvaeConsume < 5 - 1; nvaeConsume++) {
+										input.consume();
+									}
+									NoViableAltException nvae =
+										new NoViableAltException("", 9, 9, input);
+									throw nvae;
+								} finally {
+									input.rewind(nvaeMark);
+								}
 							}
 
 						}
 
 						else {
-							alt4=7;
+							int nvaeMark = input.mark();
+							try {
+								for (int nvaeConsume = 0; nvaeConsume < 4 - 1; nvaeConsume++) {
+									input.consume();
+								}
+								NoViableAltException nvae =
+									new NoViableAltException("", 9, 7, input);
+								throw nvae;
+							} finally {
+								input.rewind(nvaeMark);
+							}
 						}
 
 					}
 
 					else {
-						alt4=7;
+						int nvaeMark = input.mark();
+						try {
+							for (int nvaeConsume = 0; nvaeConsume < 3 - 1; nvaeConsume++) {
+								input.consume();
+							}
+							NoViableAltException nvae =
+								new NoViableAltException("", 9, 5, input);
+							throw nvae;
+						} finally {
+							input.rewind(nvaeMark);
+						}
 					}
 
 				}
 
 				else {
-					alt4=7;
-				}
-
-			}
-
-			else {
-				alt4=7;
-			}
-
-			}
-			break;
-		case 'r':
-			{
-			int LA4_2 = input.LA(2);
-			if ( (LA4_2=='e') ) {
-				int LA4_14 = input.LA(3);
-				if ( (LA4_14=='t') ) {
-					int LA4_21 = input.LA(4);
-					if ( (LA4_21=='u') ) {
-						int LA4_28 = input.LA(5);
-						if ( (LA4_28=='r') ) {
-							int LA4_35 = input.LA(6);
-							if ( (LA4_35=='n') ) {
-								int LA4_42 = input.LA(7);
-								if ( (LA4_42=='s') ) {
-									int LA4_48 = input.LA(8);
-									if ( ((LA4_48 >= '0' && LA4_48 <= '9')||(LA4_48 >= 'A' && LA4_48 <= 'Z')||(LA4_48 >= 'a' && LA4_48 <= 'z')) ) {
-										alt4=7;
-									}
-
-									else {
-										alt4=2;
-									}
-
-								}
-
-								else {
-									alt4=7;
-								}
-
-							}
-
-							else {
-								alt4=7;
-							}
-
-						}
-
-						else {
-							alt4=7;
-						}
-
+					int nvaeMark = input.mark();
+					try {
+						input.consume();
+						NoViableAltException nvae =
+							new NoViableAltException("", 9, 2, input);
+						throw nvae;
+					} finally {
+						input.rewind(nvaeMark);
 					}
-
-					else {
-						alt4=7;
-					}
-
 				}
 
-				else {
-					alt4=7;
 				}
-
-			}
-
-			else {
-				alt4=7;
-			}
-
-			}
-			break;
-		case 'u':
-			{
-			int LA4_3 = input.LA(2);
-			if ( (LA4_3=='s') ) {
-				int LA4_15 = input.LA(3);
-				if ( (LA4_15=='e') ) {
-					int LA4_22 = input.LA(4);
-					if ( (LA4_22=='s') ) {
-						int LA4_29 = input.LA(5);
-						if ( ((LA4_29 >= '0' && LA4_29 <= '9')||(LA4_29 >= 'A' && LA4_29 <= 'Z')||(LA4_29 >= 'a' && LA4_29 <= 'z')) ) {
-							alt4=7;
-						}
-
-						else {
-							alt4=3;
-						}
-
-					}
-
-					else {
-						alt4=7;
-					}
-
-				}
-
-				else {
-					alt4=7;
-				}
-
-			}
-
-			else {
-				alt4=7;
-			}
-
-			}
-			break;
-		case '{':
-			{
-			alt4=4;
-			}
-			break;
-		case '}':
-			{
-			alt4=5;
-			}
-			break;
-		case 'i':
-			{
-			int LA4_6 = input.LA(2);
-			if ( (LA4_6=='n') ) {
-				int LA4_16 = input.LA(3);
-				if ( (LA4_16=='t') ) {
-					int LA4_23 = input.LA(4);
-					if ( (LA4_23=='e') ) {
-						int LA4_30 = input.LA(5);
-						if ( (LA4_30=='g') ) {
-							int LA4_37 = input.LA(6);
-							if ( (LA4_37=='e') ) {
-								int LA4_43 = input.LA(7);
-								if ( (LA4_43=='r') ) {
-									int LA4_49 = input.LA(8);
-									if ( ((LA4_49 >= '0' && LA4_49 <= '9')||(LA4_49 >= 'A' && LA4_49 <= 'Z')||(LA4_49 >= 'a' && LA4_49 <= 'z')) ) {
-										alt4=7;
-									}
-
-									else {
-										alt4=6;
-									}
-
-								}
-
-								else {
-									alt4=7;
-								}
-
-							}
-
-							else {
-								alt4=7;
-							}
-
-						}
-
-						else {
-							alt4=7;
-						}
-
-					}
-
-					else {
-						alt4=7;
-					}
-
-				}
-
-				else {
-					alt4=7;
-				}
-
-			}
-
-			else {
-				alt4=7;
-			}
-
-			}
-			break;
-		case 'd':
-			{
-			int LA4_7 = input.LA(2);
-			if ( (LA4_7=='e') ) {
-				int LA4_17 = input.LA(3);
-				if ( (LA4_17=='c') ) {
-					int LA4_24 = input.LA(4);
-					if ( (LA4_24=='i') ) {
-						int LA4_31 = input.LA(5);
-						if ( (LA4_31=='m') ) {
-							int LA4_38 = input.LA(6);
-							if ( (LA4_38=='a') ) {
-								int LA4_44 = input.LA(7);
-								if ( (LA4_44=='l') ) {
-									int LA4_50 = input.LA(8);
-									if ( ((LA4_50 >= '0' && LA4_50 <= '9')||(LA4_50 >= 'A' && LA4_50 <= 'Z')||(LA4_50 >= 'a' && LA4_50 <= 'z')) ) {
-										alt4=7;
-									}
-
-									else {
-										alt4=6;
-									}
-
-								}
-
-								else {
-									alt4=7;
-								}
-
-							}
-
-							else {
-								alt4=7;
-							}
-
-						}
-
-						else {
-							alt4=7;
-						}
-
-					}
-
-					else {
-						alt4=7;
-					}
-
-				}
-
-				else {
-					alt4=7;
-				}
-
-			}
-
-			else {
-				alt4=7;
-			}
-
-			}
-			break;
-		case 'b':
-			{
-			int LA4_8 = input.LA(2);
-			if ( (LA4_8=='o') ) {
-				int LA4_18 = input.LA(3);
-				if ( (LA4_18=='o') ) {
-					int LA4_25 = input.LA(4);
-					if ( (LA4_25=='l') ) {
-						int LA4_32 = input.LA(5);
-						if ( (LA4_32=='e') ) {
-							int LA4_39 = input.LA(6);
-							if ( (LA4_39=='a') ) {
-								int LA4_45 = input.LA(7);
-								if ( (LA4_45=='n') ) {
-									int LA4_51 = input.LA(8);
-									if ( ((LA4_51 >= '0' && LA4_51 <= '9')||(LA4_51 >= 'A' && LA4_51 <= 'Z')||(LA4_51 >= 'a' && LA4_51 <= 'z')) ) {
-										alt4=7;
-									}
-
-									else {
-										alt4=6;
-									}
-
-								}
-
-								else {
-									alt4=7;
-								}
-
-							}
-
-							else {
-								alt4=7;
-							}
-
-						}
-
-						else {
-							alt4=7;
-						}
-
-					}
-
-					else {
-						alt4=7;
-					}
-
-				}
-
-				else {
-					alt4=7;
-				}
-
-			}
-
-			else {
-				alt4=7;
-			}
-
-			}
-			break;
-		case 's':
-			{
-			int LA4_9 = input.LA(2);
-			if ( (LA4_9=='t') ) {
-				int LA4_19 = input.LA(3);
-				if ( (LA4_19=='r') ) {
-					int LA4_26 = input.LA(4);
-					if ( (LA4_26=='i') ) {
-						int LA4_33 = input.LA(5);
-						if ( (LA4_33=='n') ) {
-							int LA4_40 = input.LA(6);
-							if ( (LA4_40=='g') ) {
-								int LA4_46 = input.LA(7);
-								if ( ((LA4_46 >= '0' && LA4_46 <= '9')||(LA4_46 >= 'A' && LA4_46 <= 'Z')||(LA4_46 >= 'a' && LA4_46 <= 'z')) ) {
-									alt4=7;
-								}
-
-								else {
-									alt4=6;
-								}
-
-							}
-
-							else {
-								alt4=7;
-							}
-
-						}
-
-						else {
-							alt4=7;
-						}
-
-					}
-
-					else {
-						alt4=7;
-					}
-
-				}
-
-				else {
-					alt4=7;
-				}
-
-			}
-
-			else {
-				alt4=7;
-			}
-
-			}
-			break;
-		case 'A':
-		case 'B':
-		case 'C':
-		case 'D':
-		case 'E':
-		case 'F':
-		case 'G':
-		case 'H':
-		case 'I':
-		case 'J':
-		case 'K':
-		case 'L':
-		case 'M':
-		case 'N':
-		case 'O':
-		case 'P':
-		case 'Q':
-		case 'R':
-		case 'S':
-		case 'T':
-		case 'U':
-		case 'V':
-		case 'W':
-		case 'X':
-		case 'Y':
-		case 'Z':
-		case 'a':
-		case 'c':
-		case 'e':
-		case 'g':
-		case 'h':
-		case 'j':
-		case 'k':
-		case 'l':
-		case 'm':
-		case 'n':
-		case 'o':
-		case 'p':
-		case 'q':
-		case 't':
-		case 'v':
-		case 'w':
-		case 'x':
-		case 'y':
-		case 'z':
-			{
-			alt4=7;
-			}
-			break;
-		case '\t':
-		case '\n':
-		case '\f':
-		case '\r':
-		case ' ':
-			{
-			alt4=8;
-			}
-			break;
-		case ',':
-			{
-			alt4=9;
-			}
-			break;
-		default:
-			NoViableAltException nvae =
-				new NoViableAltException("", 4, 0, input);
-			throw nvae;
-		}
-		switch (alt4) {
-			case 1 :
-				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:10: T__8
+				break;
+			case 'g':
 				{
-				mT__8(); 
+				int LA9_3 = input.LA(2);
+				if ( (LA9_3=='r') ) {
+					int LA9_6 = input.LA(3);
+					if ( (LA9_6=='e') ) {
+						int LA9_8 = input.LA(4);
+						if ( (LA9_8=='a') ) {
+							int LA9_10 = input.LA(5);
+							if ( (LA9_10=='t') ) {
+								int LA9_12 = input.LA(6);
+								if ( (LA9_12=='e') ) {
+									int LA9_14 = input.LA(7);
+									if ( (LA9_14=='r') ) {
+										alt9=3;
+									}
+									else if ( (LA9_14=='T') ) {
+										alt9=5;
+									}
+
+									else {
+										int nvaeMark = input.mark();
+										try {
+											for (int nvaeConsume = 0; nvaeConsume < 7 - 1; nvaeConsume++) {
+												input.consume();
+											}
+											NoViableAltException nvae =
+												new NoViableAltException("", 9, 14, input);
+											throw nvae;
+										} finally {
+											input.rewind(nvaeMark);
+										}
+									}
+
+								}
+
+								else {
+									int nvaeMark = input.mark();
+									try {
+										for (int nvaeConsume = 0; nvaeConsume < 6 - 1; nvaeConsume++) {
+											input.consume();
+										}
+										NoViableAltException nvae =
+											new NoViableAltException("", 9, 12, input);
+										throw nvae;
+									} finally {
+										input.rewind(nvaeMark);
+									}
+								}
+
+							}
+
+							else {
+								int nvaeMark = input.mark();
+								try {
+									for (int nvaeConsume = 0; nvaeConsume < 5 - 1; nvaeConsume++) {
+										input.consume();
+									}
+									NoViableAltException nvae =
+										new NoViableAltException("", 9, 10, input);
+									throw nvae;
+								} finally {
+									input.rewind(nvaeMark);
+								}
+							}
+
+						}
+
+						else {
+							int nvaeMark = input.mark();
+							try {
+								for (int nvaeConsume = 0; nvaeConsume < 4 - 1; nvaeConsume++) {
+									input.consume();
+								}
+								NoViableAltException nvae =
+									new NoViableAltException("", 9, 8, input);
+								throw nvae;
+							} finally {
+								input.rewind(nvaeMark);
+							}
+						}
+
+					}
+
+					else {
+						int nvaeMark = input.mark();
+						try {
+							for (int nvaeConsume = 0; nvaeConsume < 3 - 1; nvaeConsume++) {
+								input.consume();
+							}
+							NoViableAltException nvae =
+								new NoViableAltException("", 9, 6, input);
+							throw nvae;
+						} finally {
+							input.rewind(nvaeMark);
+						}
+					}
+
+				}
+
+				else {
+					int nvaeMark = input.mark();
+					try {
+						input.consume();
+						NoViableAltException nvae =
+							new NoViableAltException("", 9, 3, input);
+						throw nvae;
+					} finally {
+						input.rewind(nvaeMark);
+					}
+				}
+
+				}
+				break;
+			case 'n':
+				{
+				alt9=6;
+				}
+				break;
+			default:
+				NoViableAltException nvae =
+					new NoViableAltException("", 9, 0, input);
+				throw nvae;
+			}
+			switch (alt9) {
+				case 1 :
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:50:18: 'equalTo'
+					{
+					match("equalTo"); 
+
+					}
+					break;
+				case 2 :
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:50:30: 'lessThan'
+					{
+					match("lessThan"); 
+
+					}
+					break;
+				case 3 :
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:50:43: 'greaterThan'
+					{
+					match("greaterThan"); 
+
+					}
+					break;
+				case 4 :
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:50:59: 'lessThanOrEqualTo'
+					{
+					match("lessThanOrEqualTo"); 
+
+					}
+					break;
+				case 5 :
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:50:81: 'greateThanOrEqualTo'
+					{
+					match("greateThanOrEqualTo"); 
+
+					}
+					break;
+				case 6 :
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:50:105: 'notEqualTo'
+					{
+					match("notEqualTo"); 
+
+					}
+					break;
+
+			}
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "COMPK_KEYWORDS"
+
+	// $ANTLR start "IDENTIFIER"
+	public final void mIDENTIFIER() throws RecognitionException {
+		try {
+			int _type = IDENTIFIER;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:51:12: ( ( 'a' .. 'z' | 'A' .. 'Z' )+ )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:51:14: ( 'a' .. 'z' | 'A' .. 'Z' )+
+			{
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:51:14: ( 'a' .. 'z' | 'A' .. 'Z' )+
+			int cnt10=0;
+			loop10:
+			while (true) {
+				int alt10=2;
+				int LA10_0 = input.LA(1);
+				if ( ((LA10_0 >= 'A' && LA10_0 <= 'Z')||(LA10_0 >= 'a' && LA10_0 <= 'z')) ) {
+					alt10=1;
+				}
+
+				switch (alt10) {
+				case 1 :
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:
+					{
+					if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
+						input.consume();
+					}
+					else {
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						recover(mse);
+						throw mse;
+					}
+					}
+					break;
+
+				default :
+					if ( cnt10 >= 1 ) break loop10;
+					EarlyExitException eee = new EarlyExitException(10, input);
+					throw eee;
+				}
+				cnt10++;
+			}
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "IDENTIFIER"
+
+	// $ANTLR start "ADDING_OPERATOR"
+	public final void mADDING_OPERATOR() throws RecognitionException {
+		try {
+			int _type = ADDING_OPERATOR;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:52:17: ( ( '+' | '-' ) )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:
+			{
+			if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
+				input.consume();
+			}
+			else {
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				recover(mse);
+				throw mse;
+			}
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "ADDING_OPERATOR"
+
+	// $ANTLR start "MULTIPLYING_OPERATOR"
+	public final void mMULTIPLYING_OPERATOR() throws RecognitionException {
+		try {
+			int _type = MULTIPLYING_OPERATOR;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:53:21: ( ( '*' | '/' ) )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:
+			{
+			if ( input.LA(1)=='*'||input.LA(1)=='/' ) {
+				input.consume();
+			}
+			else {
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				recover(mse);
+				throw mse;
+			}
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "MULTIPLYING_OPERATOR"
+
+	@Override
+	public void mTokens() throws RecognitionException {
+		// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:8: ( T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | NUMERIC_LITERAL | BOOLEAN | DATATYPE | FK_CALL | FK_WITH | COMMA | COMPK_KEYWORDS | IDENTIFIER | ADDING_OPERATOR | MULTIPLYING_OPERATOR )
+		int alt11=16;
+		alt11 = dfa11.predict(input);
+		switch (alt11) {
+			case 1 :
+				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:10: T__16
+				{
+				mT__16(); 
 
 				}
 				break;
 			case 2 :
-				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:15: T__9
+				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:16: T__17
 				{
-				mT__9(); 
+				mT__17(); 
 
 				}
 				break;
 			case 3 :
-				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:20: T__10
+				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:22: T__18
 				{
-				mT__10(); 
+				mT__18(); 
 
 				}
 				break;
 			case 4 :
-				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:26: T__11
+				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:28: T__19
 				{
-				mT__11(); 
+				mT__19(); 
 
 				}
 				break;
 			case 5 :
-				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:32: T__12
+				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:34: T__20
 				{
-				mT__12(); 
+				mT__20(); 
 
 				}
 				break;
 			case 6 :
-				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:38: DATATYPE
+				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:40: T__21
+				{
+				mT__21(); 
+
+				}
+				break;
+			case 7 :
+				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:46: NUMERIC_LITERAL
+				{
+				mNUMERIC_LITERAL(); 
+
+				}
+				break;
+			case 8 :
+				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:62: BOOLEAN
+				{
+				mBOOLEAN(); 
+
+				}
+				break;
+			case 9 :
+				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:70: DATATYPE
 				{
 				mDATATYPE(); 
 
 				}
 				break;
-			case 7 :
-				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:47: IDENTIFIER
+			case 10 :
+				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:79: FK_CALL
+				{
+				mFK_CALL(); 
+
+				}
+				break;
+			case 11 :
+				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:87: FK_WITH
+				{
+				mFK_WITH(); 
+
+				}
+				break;
+			case 12 :
+				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:95: COMMA
+				{
+				mCOMMA(); 
+
+				}
+				break;
+			case 13 :
+				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:101: COMPK_KEYWORDS
+				{
+				mCOMPK_KEYWORDS(); 
+
+				}
+				break;
+			case 14 :
+				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:116: IDENTIFIER
 				{
 				mIDENTIFIER(); 
 
 				}
 				break;
-			case 8 :
-				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:58: WHITESPAE
+			case 15 :
+				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:127: ADDING_OPERATOR
 				{
-				mWHITESPAE(); 
+				mADDING_OPERATOR(); 
 
 				}
 				break;
-			case 9 :
-				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:68: COMMA
+			case 16 :
+				// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:1:143: MULTIPLYING_OPERATOR
 				{
-				mCOMMA(); 
+				mMULTIPLYING_OPERATOR(); 
 
 				}
 				break;
@@ -902,5 +1139,256 @@ public class GKVLexer extends Lexer {
 	}
 
 
+	protected DFA1 dfa1 = new DFA1(this);
+	protected DFA11 dfa11 = new DFA11(this);
+	static final String DFA1_eotS =
+		"\2\uffff\1\4\2\uffff";
+	static final String DFA1_eofS =
+		"\5\uffff";
+	static final String DFA1_minS =
+		"\1\53\1\60\1\56\2\uffff";
+	static final String DFA1_maxS =
+		"\3\71\2\uffff";
+	static final String DFA1_acceptS =
+		"\3\uffff\1\1\1\2";
+	static final String DFA1_specialS =
+		"\5\uffff}>";
+	static final String[] DFA1_transitionS = {
+			"\1\1\1\uffff\1\1\2\uffff\12\2",
+			"\12\2",
+			"\1\3\1\uffff\12\2",
+			"",
+			""
+	};
+
+	static final short[] DFA1_eot = DFA.unpackEncodedString(DFA1_eotS);
+	static final short[] DFA1_eof = DFA.unpackEncodedString(DFA1_eofS);
+	static final char[] DFA1_min = DFA.unpackEncodedStringToUnsignedChars(DFA1_minS);
+	static final char[] DFA1_max = DFA.unpackEncodedStringToUnsignedChars(DFA1_maxS);
+	static final short[] DFA1_accept = DFA.unpackEncodedString(DFA1_acceptS);
+	static final short[] DFA1_special = DFA.unpackEncodedString(DFA1_specialS);
+	static final short[][] DFA1_transition;
+
+	static {
+		int numStates = DFA1_transitionS.length;
+		DFA1_transition = new short[numStates][];
+		for (int i=0; i<numStates; i++) {
+			DFA1_transition[i] = DFA.unpackEncodedString(DFA1_transitionS[i]);
+		}
+	}
+
+	protected class DFA1 extends DFA {
+
+		public DFA1(BaseRecognizer recognizer) {
+			this.recognizer = recognizer;
+			this.decisionNumber = 1;
+			this.eot = DFA1_eot;
+			this.eof = DFA1_eof;
+			this.min = DFA1_min;
+			this.max = DFA1_max;
+			this.accept = DFA1_accept;
+			this.special = DFA1_special;
+			this.transition = DFA1_transition;
+		}
+		@Override
+		public String getDescription() {
+			return "40:18: ( DECIMAL | INTEGER )";
+		}
+	}
+
+	static final String DFA11_eotS =
+		"\4\uffff\3\24\1\32\1\uffff\6\24\1\uffff\4\24\2\uffff\1\24\1\46\1\24\1"+
+		"\50\1\uffff\12\24\1\63\1\uffff\1\24\1\uffff\12\24\1\uffff\1\24\1\100\3"+
+		"\24\1\104\1\105\5\24\1\uffff\1\100\2\24\2\uffff\13\24\3\131\1\132\4\24"+
+		"\2\uffff\1\132\12\24\1\132\1\24\1\132\13\24\1\132\2\24\1\132";
+	static final String DFA11_eofS =
+		"\170\uffff";
+	static final String DFA11_minS =
+		"\1\12\3\uffff\2\156\1\162\1\60\1\uffff\1\162\1\141\1\145\1\157\1\141\1"+
+		"\151\1\uffff\1\161\1\145\1\162\1\157\2\uffff\1\144\1\101\1\164\1\101\1"+
+		"\uffff\1\165\1\154\1\143\1\157\1\154\1\164\1\165\1\163\1\145\1\164\1\101"+
+		"\1\uffff\1\145\1\uffff\1\145\1\163\1\151\2\154\1\150\1\141\1\163\1\141"+
+		"\1\105\1\uffff\1\147\1\101\1\145\1\155\1\145\2\101\1\154\1\124\1\164\1"+
+		"\161\1\145\1\uffff\1\101\2\141\2\uffff\1\124\1\150\1\145\1\165\1\162\1"+
+		"\154\1\156\1\157\1\141\1\124\1\141\4\101\1\156\1\124\1\150\1\154\2\uffff"+
+		"\1\101\1\150\1\141\1\124\1\162\1\141\1\156\1\157\1\105\1\156\1\117\1\101"+
+		"\1\161\1\101\1\162\1\165\1\105\1\141\1\161\1\154\1\165\1\124\1\141\1\157"+
+		"\1\154\1\101\1\124\1\157\1\101";
+	static final String DFA11_maxS =
+		"\1\172\3\uffff\1\156\1\163\1\162\1\71\1\uffff\1\162\1\141\1\145\1\157"+
+		"\1\141\1\151\1\uffff\1\161\1\145\1\162\1\157\2\uffff\1\144\1\172\1\164"+
+		"\1\172\1\uffff\1\165\1\154\1\143\1\157\1\154\1\164\1\165\1\163\1\145\1"+
+		"\164\1\172\1\uffff\1\145\1\uffff\1\145\1\163\1\151\2\154\1\150\1\141\1"+
+		"\163\1\141\1\105\1\uffff\1\147\1\172\1\145\1\155\1\145\2\172\1\154\1\124"+
+		"\1\164\1\161\1\145\1\uffff\1\172\2\141\2\uffff\1\124\1\150\1\145\1\165"+
+		"\1\162\1\154\1\156\1\157\1\141\1\162\1\141\4\172\1\156\1\124\1\150\1\154"+
+		"\2\uffff\1\172\1\150\1\141\1\124\1\162\1\141\1\156\1\157\1\105\1\156\1"+
+		"\117\1\172\1\161\1\172\1\162\1\165\1\105\1\141\1\161\1\154\1\165\1\124"+
+		"\1\141\1\157\1\154\1\172\1\124\1\157\1\172";
+	static final String DFA11_acceptS =
+		"\1\uffff\1\1\1\2\1\3\4\uffff\1\7\6\uffff\1\14\4\uffff\1\16\1\20\4\uffff"+
+		"\1\17\13\uffff\1\5\1\uffff\1\6\12\uffff\1\4\14\uffff\1\10\3\uffff\1\12"+
+		"\1\13\23\uffff\1\11\1\15\35\uffff";
+	static final String DFA11_specialS =
+		"\170\uffff}>";
+	static final String[] DFA11_transitionS = {
+			"\1\3\35\uffff\1\1\1\2\1\25\1\7\1\17\1\7\1\uffff\1\25\12\10\7\uffff\32"+
+			"\24\6\uffff\1\4\1\14\1\15\1\13\1\20\1\12\1\22\1\24\1\5\2\24\1\21\1\24"+
+			"\1\23\1\6\4\24\1\11\2\24\1\16\3\24",
+			"",
+			"",
+			"",
+			"\1\26",
+			"\1\30\4\uffff\1\27",
+			"\1\31",
+			"\12\10",
+			"",
+			"\1\33",
+			"\1\34",
+			"\1\35",
+			"\1\36",
+			"\1\37",
+			"\1\40",
+			"",
+			"\1\41",
+			"\1\42",
+			"\1\43",
+			"\1\44",
+			"",
+			"",
+			"\1\45",
+			"\32\24\6\uffff\32\24",
+			"\1\47",
+			"\32\24\6\uffff\32\24",
+			"",
+			"\1\51",
+			"\1\52",
+			"\1\53",
+			"\1\54",
+			"\1\55",
+			"\1\56",
+			"\1\57",
+			"\1\60",
+			"\1\61",
+			"\1\62",
+			"\32\24\6\uffff\32\24",
+			"",
+			"\1\64",
+			"",
+			"\1\65",
+			"\1\66",
+			"\1\67",
+			"\1\70",
+			"\1\71",
+			"\1\72",
+			"\1\73",
+			"\1\74",
+			"\1\75",
+			"\1\76",
+			"",
+			"\1\77",
+			"\32\24\6\uffff\32\24",
+			"\1\101",
+			"\1\102",
+			"\1\103",
+			"\32\24\6\uffff\32\24",
+			"\32\24\6\uffff\32\24",
+			"\1\106",
+			"\1\107",
+			"\1\110",
+			"\1\111",
+			"\1\112",
+			"",
+			"\32\24\6\uffff\32\24",
+			"\1\113",
+			"\1\114",
+			"",
+			"",
+			"\1\115",
+			"\1\116",
+			"\1\117",
+			"\1\120",
+			"\1\121",
+			"\1\122",
+			"\1\123",
+			"\1\124",
+			"\1\125",
+			"\1\127\35\uffff\1\126",
+			"\1\130",
+			"\32\24\6\uffff\32\24",
+			"\32\24\6\uffff\32\24",
+			"\32\24\6\uffff\32\24",
+			"\32\24\6\uffff\32\24",
+			"\1\133",
+			"\1\134",
+			"\1\135",
+			"\1\136",
+			"",
+			"",
+			"\16\24\1\137\13\24\6\uffff\32\24",
+			"\1\140",
+			"\1\141",
+			"\1\142",
+			"\1\143",
+			"\1\144",
+			"\1\145",
+			"\1\146",
+			"\1\147",
+			"\1\150",
+			"\1\151",
+			"\32\24\6\uffff\32\24",
+			"\1\152",
+			"\32\24\6\uffff\32\24",
+			"\1\153",
+			"\1\154",
+			"\1\155",
+			"\1\156",
+			"\1\157",
+			"\1\160",
+			"\1\161",
+			"\1\162",
+			"\1\163",
+			"\1\164",
+			"\1\165",
+			"\32\24\6\uffff\32\24",
+			"\1\166",
+			"\1\167",
+			"\32\24\6\uffff\32\24"
+	};
+
+	static final short[] DFA11_eot = DFA.unpackEncodedString(DFA11_eotS);
+	static final short[] DFA11_eof = DFA.unpackEncodedString(DFA11_eofS);
+	static final char[] DFA11_min = DFA.unpackEncodedStringToUnsignedChars(DFA11_minS);
+	static final char[] DFA11_max = DFA.unpackEncodedStringToUnsignedChars(DFA11_maxS);
+	static final short[] DFA11_accept = DFA.unpackEncodedString(DFA11_acceptS);
+	static final short[] DFA11_special = DFA.unpackEncodedString(DFA11_specialS);
+	static final short[][] DFA11_transition;
+
+	static {
+		int numStates = DFA11_transitionS.length;
+		DFA11_transition = new short[numStates][];
+		for (int i=0; i<numStates; i++) {
+			DFA11_transition[i] = DFA.unpackEncodedString(DFA11_transitionS[i]);
+		}
+	}
+
+	protected class DFA11 extends DFA {
+
+		public DFA11(BaseRecognizer recognizer) {
+			this.recognizer = recognizer;
+			this.decisionNumber = 11;
+			this.eot = DFA11_eot;
+			this.eof = DFA11_eof;
+			this.min = DFA11_min;
+			this.max = DFA11_max;
+			this.accept = DFA11_accept;
+			this.special = DFA11_special;
+			this.transition = DFA11_transition;
+		}
+		@Override
+		public String getDescription() {
+			return "1:1: Tokens : ( T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | NUMERIC_LITERAL | BOOLEAN | DATATYPE | FK_CALL | FK_WITH | COMMA | COMPK_KEYWORDS | IDENTIFIER | ADDING_OPERATOR | MULTIPLYING_OPERATOR );";
+		}
+	}
 
 }
