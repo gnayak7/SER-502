@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g 2016-04-09 02:48:29
+// $ANTLR 3.5.2 /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g 2016-04-09 16:51:03
 
   package edu.asu.msse.gkv;
 
@@ -207,22 +207,22 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = NUMERIC_LITERAL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:58:16: ( ( DECIMAL | INTEGER ) )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:58:18: ( DECIMAL | INTEGER )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:59:16: ( ( DECIMAL | INTEGER ) )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:59:18: ( DECIMAL | INTEGER )
 			{
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:58:18: ( DECIMAL | INTEGER )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:59:18: ( DECIMAL | INTEGER )
 			int alt1=2;
 			alt1 = dfa1.predict(input);
 			switch (alt1) {
 				case 1 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:58:19: DECIMAL
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:59:19: DECIMAL
 					{
 					mDECIMAL(); 
 
 					}
 					break;
 				case 2 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:58:29: INTEGER
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:59:29: INTEGER
 					{
 					mINTEGER(); 
 
@@ -245,13 +245,13 @@ public class GKVLexer extends Lexer {
 	// $ANTLR start "DECIMAL"
 	public final void mDECIMAL() throws RecognitionException {
 		try {
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:59:17: ( ( ( '+' | '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )+ ) )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:59:18: ( ( '+' | '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )+ )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:60:17: ( ( ( '+' | '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )+ ) )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:60:18: ( ( '+' | '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )+ )
 			{
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:59:18: ( ( '+' | '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )+ )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:59:19: ( '+' | '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )+
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:60:18: ( ( '+' | '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )+ )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:60:19: ( '+' | '-' )? ( '0' .. '9' )+ '.' ( '0' .. '9' )+
 			{
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:59:19: ( '+' | '-' )?
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:60:19: ( '+' | '-' )?
 			int alt2=2;
 			int LA2_0 = input.LA(1);
 			if ( (LA2_0=='+'||LA2_0=='-') ) {
@@ -274,7 +274,7 @@ public class GKVLexer extends Lexer {
 
 			}
 
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:59:29: ( '0' .. '9' )+
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:60:29: ( '0' .. '9' )+
 			int cnt3=0;
 			loop3:
 			while (true) {
@@ -308,7 +308,7 @@ public class GKVLexer extends Lexer {
 			}
 
 			match('.'); 
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:59:43: ( '0' .. '9' )+
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:60:43: ( '0' .. '9' )+
 			int cnt4=0;
 			loop4:
 			while (true) {
@@ -355,13 +355,13 @@ public class GKVLexer extends Lexer {
 	// $ANTLR start "INTEGER"
 	public final void mINTEGER() throws RecognitionException {
 		try {
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:60:17: ( ( ( '+' | '-' )? ( '0' .. '9' )+ ) )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:60:19: ( ( '+' | '-' )? ( '0' .. '9' )+ )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:61:17: ( ( ( '+' | '-' )? ( '0' .. '9' )+ ) )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:61:19: ( ( '+' | '-' )? ( '0' .. '9' )+ )
 			{
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:60:19: ( ( '+' | '-' )? ( '0' .. '9' )+ )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:60:20: ( '+' | '-' )? ( '0' .. '9' )+
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:61:19: ( ( '+' | '-' )? ( '0' .. '9' )+ )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:61:20: ( '+' | '-' )? ( '0' .. '9' )+
 			{
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:60:20: ( '+' | '-' )?
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:61:20: ( '+' | '-' )?
 			int alt5=2;
 			int LA5_0 = input.LA(1);
 			if ( (LA5_0=='+'||LA5_0=='-') ) {
@@ -384,7 +384,7 @@ public class GKVLexer extends Lexer {
 
 			}
 
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:60:30: ( '0' .. '9' )+
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:61:30: ( '0' .. '9' )+
 			int cnt6=0;
 			loop6:
 			while (true) {
@@ -431,10 +431,10 @@ public class GKVLexer extends Lexer {
 	// $ANTLR start "NUMBER"
 	public final void mNUMBER() throws RecognitionException {
 		try {
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:61:16: ( ( '0' .. '9' )+ )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:61:18: ( '0' .. '9' )+
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:62:16: ( ( '0' .. '9' )+ )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:62:18: ( '0' .. '9' )+
 			{
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:61:18: ( '0' .. '9' )+
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:62:18: ( '0' .. '9' )+
 			int cnt7=0;
 			loop7:
 			while (true) {
@@ -481,10 +481,10 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = BOOLEAN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:62:8: ( ( 'true' | 'false' ) )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:62:10: ( 'true' | 'false' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:63:8: ( ( 'true' | 'false' ) )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:63:10: ( 'true' | 'false' )
 			{
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:62:10: ( 'true' | 'false' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:63:10: ( 'true' | 'false' )
 			int alt8=2;
 			int LA8_0 = input.LA(1);
 			if ( (LA8_0=='t') ) {
@@ -502,14 +502,14 @@ public class GKVLexer extends Lexer {
 
 			switch (alt8) {
 				case 1 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:62:11: 'true'
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:63:11: 'true'
 					{
 					match("true"); 
 
 					}
 					break;
 				case 2 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:62:20: 'false'
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:63:20: 'false'
 					{
 					match("false"); 
 
@@ -534,10 +534,10 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = DATATYPE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:63:9: ( ( 'integer' | 'decimal' | 'boolean' ) )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:63:11: ( 'integer' | 'decimal' | 'boolean' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:64:9: ( ( 'integer' | 'decimal' | 'boolean' ) )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:64:11: ( 'integer' | 'decimal' | 'boolean' )
 			{
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:63:11: ( 'integer' | 'decimal' | 'boolean' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:64:11: ( 'integer' | 'decimal' | 'boolean' )
 			int alt9=3;
 			switch ( input.LA(1) ) {
 			case 'i':
@@ -562,21 +562,21 @@ public class GKVLexer extends Lexer {
 			}
 			switch (alt9) {
 				case 1 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:63:12: 'integer'
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:64:12: 'integer'
 					{
 					match("integer"); 
 
 					}
 					break;
 				case 2 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:63:24: 'decimal'
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:64:24: 'decimal'
 					{
 					match("decimal"); 
 
 					}
 					break;
 				case 3 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:63:36: 'boolean'
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:64:36: 'boolean'
 					{
 					match("boolean"); 
 
@@ -601,8 +601,8 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = FK_FUNCTION;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:65:13: ( 'function' )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:65:15: 'function'
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:66:13: ( 'function' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:66:15: 'function'
 			{
 			match("function"); 
 
@@ -622,8 +622,8 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = FK_USES;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:66:9: ( 'uses' )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:66:11: 'uses'
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:67:9: ( 'uses' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:67:11: 'uses'
 			{
 			match("uses"); 
 
@@ -643,8 +643,8 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = FK_RETURNS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:67:12: ( 'returns' )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:67:14: 'returns'
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:68:12: ( 'returns' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:68:14: 'returns'
 			{
 			match("returns"); 
 
@@ -664,8 +664,8 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = FK_RETURN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:68:11: ( 'return' )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:68:13: 'return'
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:69:11: ( 'return' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:69:13: 'return'
 			{
 			match("return"); 
 
@@ -685,8 +685,8 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = O_BRACE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:70:9: ( '{' )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:70:11: '{'
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:71:9: ( '{' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:71:11: '{'
 			{
 			match('{'); 
 			}
@@ -705,8 +705,8 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = C_BRACE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:71:9: ( '}' )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:71:11: '}'
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:72:9: ( '}' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:72:11: '}'
 			{
 			match('}'); 
 			}
@@ -725,8 +725,8 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = CK_IF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:73:7: ( 'if' )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:73:9: 'if'
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:74:7: ( 'if' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:74:9: 'if'
 			{
 			match("if"); 
 
@@ -746,8 +746,8 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = CK_ELSE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:74:9: ( 'else' )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:74:11: 'else'
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:75:9: ( 'else' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:75:11: 'else'
 			{
 			match("else"); 
 
@@ -767,8 +767,8 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = CK_THEN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:75:9: ( 'then' )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:75:11: 'then'
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:76:9: ( 'then' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:76:11: 'then'
 			{
 			match("then"); 
 
@@ -788,8 +788,8 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = CK_ELSIF;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:76:10: ( 'elsif' )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:76:12: 'elsif'
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:77:10: ( 'elsif' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:77:12: 'elsif'
 			{
 			match("elsif"); 
 
@@ -809,8 +809,8 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = FK_CALL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:78:8: ( 'call' )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:78:9: 'call'
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:79:8: ( 'call' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:79:9: 'call'
 			{
 			match("call"); 
 
@@ -830,8 +830,8 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = FK_WITH;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:79:8: ( 'with' )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:79:10: 'with'
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:80:8: ( 'with' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:80:10: 'with'
 			{
 			match("with"); 
 
@@ -851,8 +851,8 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = COMMA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:81:6: ( ',' )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:81:8: ','
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:82:6: ( ',' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:82:8: ','
 			{
 			match(','); 
 			}
@@ -871,10 +871,10 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = COMPK_KEYWORDS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:82:15: ( ( 'equalTo' | 'lessThan' | 'greaterThan' | 'lessThanOrEqualTo' | 'greateThanOrEqualTo' | 'notEqualTo' ) )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:82:17: ( 'equalTo' | 'lessThan' | 'greaterThan' | 'lessThanOrEqualTo' | 'greateThanOrEqualTo' | 'notEqualTo' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:83:15: ( ( 'equalTo' | 'lessThan' | 'greaterThan' | 'lessThanOrEqualTo' | 'greateThanOrEqualTo' | 'notEqualTo' ) )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:83:17: ( 'equalTo' | 'lessThan' | 'greaterThan' | 'lessThanOrEqualTo' | 'greateThanOrEqualTo' | 'notEqualTo' )
 			{
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:82:17: ( 'equalTo' | 'lessThan' | 'greaterThan' | 'lessThanOrEqualTo' | 'greateThanOrEqualTo' | 'notEqualTo' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:83:17: ( 'equalTo' | 'lessThan' | 'greaterThan' | 'lessThanOrEqualTo' | 'greateThanOrEqualTo' | 'notEqualTo' )
 			int alt10=6;
 			switch ( input.LA(1) ) {
 			case 'e':
@@ -1145,42 +1145,42 @@ public class GKVLexer extends Lexer {
 			}
 			switch (alt10) {
 				case 1 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:82:18: 'equalTo'
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:83:18: 'equalTo'
 					{
 					match("equalTo"); 
 
 					}
 					break;
 				case 2 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:82:30: 'lessThan'
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:83:30: 'lessThan'
 					{
 					match("lessThan"); 
 
 					}
 					break;
 				case 3 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:82:43: 'greaterThan'
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:83:43: 'greaterThan'
 					{
 					match("greaterThan"); 
 
 					}
 					break;
 				case 4 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:82:59: 'lessThanOrEqualTo'
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:83:59: 'lessThanOrEqualTo'
 					{
 					match("lessThanOrEqualTo"); 
 
 					}
 					break;
 				case 5 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:82:81: 'greateThanOrEqualTo'
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:83:81: 'greateThanOrEqualTo'
 					{
 					match("greateThanOrEqualTo"); 
 
 					}
 					break;
 				case 6 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:82:105: 'notEqualTo'
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:83:105: 'notEqualTo'
 					{
 					match("notEqualTo"); 
 
@@ -1205,10 +1205,10 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = IDENTIFIER;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:83:12: ( ( 'a' .. 'z' | 'A' .. 'Z' )+ )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:83:14: ( 'a' .. 'z' | 'A' .. 'Z' )+
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:84:12: ( ( 'a' .. 'z' | 'A' .. 'Z' )+ )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:84:14: ( 'a' .. 'z' | 'A' .. 'Z' )+
 			{
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:83:14: ( 'a' .. 'z' | 'A' .. 'Z' )+
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:84:14: ( 'a' .. 'z' | 'A' .. 'Z' )+
 			int cnt11=0;
 			loop11:
 			while (true) {
@@ -1257,7 +1257,7 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = ADDING_OPERATOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:84:17: ( ( '+' | '-' ) )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:85:17: ( ( '+' | '-' ) )
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:
 			{
 			if ( input.LA(1)=='+'||input.LA(1)=='-' ) {
@@ -1284,7 +1284,7 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = MULTIPLYING_OPERATOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:85:21: ( ( '*' | '/' ) )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:86:21: ( ( '*' | '/' ) )
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:
 			{
 			if ( input.LA(1)=='*'||input.LA(1)=='/' ) {
@@ -1311,10 +1311,10 @@ public class GKVLexer extends Lexer {
 		try {
 			int _type = WHITESPACE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:86:12: ( ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )+ )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:86:14: ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )+
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:87:12: ( ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )+ )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:87:14: ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )+
 			{
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:86:14: ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )+
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:87:14: ( ' ' | '\\t' | '\\r' | '\\n' | '\\f' )+
 			int cnt12=0;
 			loop12:
 			while (true) {
@@ -1619,7 +1619,7 @@ public class GKVLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "58:18: ( DECIMAL | INTEGER )";
+			return "59:18: ( DECIMAL | INTEGER )";
 		}
 	}
 

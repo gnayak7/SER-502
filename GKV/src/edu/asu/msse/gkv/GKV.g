@@ -52,6 +52,7 @@ function :
           FK_FUNCTION IDENTIFIER (FK_USES DATATYPE IDENTIFIER (COMMA DATATYPE IDENTIFIER)*)? FK_RETURNS DATATYPE
           O_BRACE 
           sequenceOfStatements
+          (FK_RETURN expression ';')?
           C_BRACE
           ;
 

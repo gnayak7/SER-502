@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g 2016-04-09 02:48:28
+// $ANTLR 3.5.2 /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g 2016-04-09 16:51:03
 
   package edu.asu.msse.gkv;
 
@@ -1021,11 +1021,11 @@ public class GKVParser extends Parser {
 
 
 	// $ANTLR start "function"
-	// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:51:1: function : FK_FUNCTION IDENTIFIER ( FK_USES DATATYPE IDENTIFIER ( COMMA DATATYPE IDENTIFIER )* )? FK_RETURNS DATATYPE O_BRACE sequenceOfStatements C_BRACE ;
+	// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:51:1: function : FK_FUNCTION IDENTIFIER ( FK_USES DATATYPE IDENTIFIER ( COMMA DATATYPE IDENTIFIER )* )? FK_RETURNS DATATYPE O_BRACE sequenceOfStatements ( FK_RETURN expression ';' )? C_BRACE ;
 	public final void function() throws RecognitionException {
 		try {
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:51:10: ( FK_FUNCTION IDENTIFIER ( FK_USES DATATYPE IDENTIFIER ( COMMA DATATYPE IDENTIFIER )* )? FK_RETURNS DATATYPE O_BRACE sequenceOfStatements C_BRACE )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:52:11: FK_FUNCTION IDENTIFIER ( FK_USES DATATYPE IDENTIFIER ( COMMA DATATYPE IDENTIFIER )* )? FK_RETURNS DATATYPE O_BRACE sequenceOfStatements C_BRACE
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:51:10: ( FK_FUNCTION IDENTIFIER ( FK_USES DATATYPE IDENTIFIER ( COMMA DATATYPE IDENTIFIER )* )? FK_RETURNS DATATYPE O_BRACE sequenceOfStatements ( FK_RETURN expression ';' )? C_BRACE )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:52:11: FK_FUNCTION IDENTIFIER ( FK_USES DATATYPE IDENTIFIER ( COMMA DATATYPE IDENTIFIER )* )? FK_RETURNS DATATYPE O_BRACE sequenceOfStatements ( FK_RETURN expression ';' )? C_BRACE
 			{
 			match(input,FK_FUNCTION,FOLLOW_FK_FUNCTION_in_function415); 
 			match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_function417); 
@@ -1078,7 +1078,28 @@ public class GKVParser extends Parser {
 			sequenceOfStatements();
 			state._fsp--;
 
-			match(input,C_BRACE,FOLLOW_C_BRACE_in_function476); 
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:55:11: ( FK_RETURN expression ';' )?
+			int alt18=2;
+			int LA18_0 = input.LA(1);
+			if ( (LA18_0==FK_RETURN) ) {
+				alt18=1;
+			}
+			switch (alt18) {
+				case 1 :
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:55:12: FK_RETURN expression ';'
+					{
+					match(input,FK_RETURN,FOLLOW_FK_RETURN_in_function477); 
+					pushFollow(FOLLOW_expression_in_function479);
+					expression();
+					state._fsp--;
+
+					match(input,30,FOLLOW_30_in_function481); 
+					}
+					break;
+
+			}
+
+			match(input,C_BRACE,FOLLOW_C_BRACE_in_function495); 
 			}
 
 		}
@@ -1174,6 +1195,9 @@ public class GKVParser extends Parser {
 	public static final BitSet FOLLOW_FK_RETURNS_in_function437 = new BitSet(new long[]{0x0000000000002000L});
 	public static final BitSet FOLLOW_DATATYPE_in_function439 = new BitSet(new long[]{0x0000000004000000L});
 	public static final BitSet FOLLOW_O_BRACE_in_function451 = new BitSet(new long[]{0x000000044020A100L});
-	public static final BitSet FOLLOW_sequenceOfStatements_in_function464 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_C_BRACE_in_function476 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_sequenceOfStatements_in_function464 = new BitSet(new long[]{0x0000000000021000L});
+	public static final BitSet FOLLOW_FK_RETURN_in_function477 = new BitSet(new long[]{0x0000000012200000L});
+	public static final BitSet FOLLOW_expression_in_function479 = new BitSet(new long[]{0x0000000040000000L});
+	public static final BitSet FOLLOW_30_in_function481 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_C_BRACE_in_function495 = new BitSet(new long[]{0x0000000000000002L});
 }
