@@ -4,7 +4,7 @@ options {
   language = Java;
 }
 
-@header {
+@parser:: header {
   package edu.asu.msse.gkv;
 }
 
@@ -17,7 +17,7 @@ program :
           
 sequenceOfStatements: (simpleStatement | compoundStatement)+; 
 
-simpleStatement: (assignmentStatement | declarationStatement | functionCall)? ';';
+simpleStatement: (assignmentStatement | declarationStatement | functionCall | display)? ';';
 
 compoundStatement: ifStatement | loop;
 
@@ -39,29 +39,40 @@ relation: simpleExpression (COMPK_KEYWORDS simpleExpression)?;
 simpleExpression: term (ADDING_OPERATOR term)*;
 
 term: factor (MULTIPLYING_OPERATOR factor)*; 
+ 
+factor : (INTEGER | DECIMAL | IDENTIFIER | '(' expression ')');
 
-factor : (NUMERIC_LITERAL | IDENTIFIER | '(' expression ')');
-
-declarationStatement: (DATATYPE IDENTIFIER (COMMA IDENTIFIER)*| DATATYPE IDENTIFIER 'is' expression (COMMA IDENTIFIER 'is' expression)*) ;
+declarationStatement: (datatype IDENTIFIER (COMMA IDENTIFIER)*| datatype IDENTIFIER 'is' expression (COMMA IDENTIFIER 'is' expression)*) ;
 
 functionCall: FK_CALL IDENTIFIER (FK_WITH parameters)?;
 
 parameters: expression (COMMA expression)*;
 
 function :
-          FK_FUNCTION IDENTIFIER (FK_USES DATATYPE IDENTIFIER (COMMA DATATYPE IDENTIFIER)*)? FK_RETURNS DATATYPE
+          FK_FUNCTION IDENTIFIER (FK_USES datatype IDENTIFIER (COMMA datatype IDENTIFIER)*)? FK_RETURNS datatype
           O_BRACE 
           sequenceOfStatements
-          (FK_RETURN expression ';')?
+          FK_RETURN expression ';'
           C_BRACE
           ;
+          
+display: 'show' (STRING_LITERAL | INTEGER | DECIMAL | IDENTIFIER);
 
-NUMERIC_LITERAL: (DECIMAL | INTEGER); 
-fragment DECIMAL:(('+'|'-')?('0'..'9')+'.'('0'..'9')+);
-fragment INTEGER: (('+'|'-')?('0'..'9')+);
-fragment NUMBER: ('0'..'9')+;
+INTEGER: (('+'|'-')? NUMBER+);
+DECIMAL:(('+'|'-')? NUMBER'.'NUMBER+);
+
+STRING_LITERAL
+    : '"' 
+       {StringBuilder sb = new StringBuilder();}
+       ( c = ~('"' | '\n' | '\r') {sb.appendCodePodatatypeint(c);})*
+      '"'
+      {setText(sb.toString();}
+    ;
+ 
+fragment NUMBER: ('0'..'9');
+
 BOOLEAN: ('true' | 'false');
-DATATYPE: ('integer' | 'decimal' | 'boolean');
+datatype: ('integer' | 'decimal' | 'boolean');
 
 FK_FUNCTION : 'function';
 FK_USES : 'uses';

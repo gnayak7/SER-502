@@ -37,6 +37,7 @@ public class Test {
 		TokenStream tokenStream = new CommonTokenStream(gkvLexer);
 		GKVParser gkvParser = new GKVParser(tokenStream);
 		gkvParser.program();
+	      
 		System.out.println("done");
 	}
 }

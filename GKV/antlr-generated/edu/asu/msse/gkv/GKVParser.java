@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g 2016-04-09 16:51:03
+// $ANTLR 3.5.2 /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g 2016-04-15 23:40:06
 
   package edu.asu.msse.gkv;
 
@@ -13,12 +13,14 @@ public class GKVParser extends Parser {
 	public static final String[] tokenNames = new String[] {
 		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "ADDING_OPERATOR", "BOOLEAN", 
 		"CK_ELSE", "CK_ELSIF", "CK_IF", "CK_THEN", "COMMA", "COMPK_KEYWORDS", 
-		"C_BRACE", "DATATYPE", "DECIMAL", "FK_CALL", "FK_FUNCTION", "FK_RETURN", 
-		"FK_RETURNS", "FK_USES", "FK_WITH", "IDENTIFIER", "INTEGER", "MULTIPLYING_OPERATOR", 
-		"NUMBER", "NUMERIC_LITERAL", "O_BRACE", "WHITESPACE", "'('", "')'", "';'", 
-		"'and'", "'is'", "'or'", "'while'"
+		"C_BRACE", "DECIMAL", "FK_CALL", "FK_FUNCTION", "FK_RETURN", "FK_RETURNS", 
+		"FK_USES", "FK_WITH", "IDENTIFIER", "INTEGER", "MULTIPLYING_OPERATOR", 
+		"NUMBER", "O_BRACE", "STRING_LITERAL", "WHITESPACE", "'('", "')'", "';'", 
+		"'and'", "'boolean'", "'decimal'", "'integer'", "'is'", "'or'", "'show'", 
+		"'while'"
 	};
 	public static final int EOF=-1;
+	public static final int T__27=27;
 	public static final int T__28=28;
 	public static final int T__29=29;
 	public static final int T__30=30;
@@ -26,6 +28,9 @@ public class GKVParser extends Parser {
 	public static final int T__32=32;
 	public static final int T__33=33;
 	public static final int T__34=34;
+	public static final int T__35=35;
+	public static final int T__36=36;
+	public static final int T__37=37;
 	public static final int ADDING_OPERATOR=4;
 	public static final int BOOLEAN=5;
 	public static final int CK_ELSE=6;
@@ -35,21 +40,20 @@ public class GKVParser extends Parser {
 	public static final int COMMA=10;
 	public static final int COMPK_KEYWORDS=11;
 	public static final int C_BRACE=12;
-	public static final int DATATYPE=13;
-	public static final int DECIMAL=14;
-	public static final int FK_CALL=15;
-	public static final int FK_FUNCTION=16;
-	public static final int FK_RETURN=17;
-	public static final int FK_RETURNS=18;
-	public static final int FK_USES=19;
-	public static final int FK_WITH=20;
-	public static final int IDENTIFIER=21;
-	public static final int INTEGER=22;
-	public static final int MULTIPLYING_OPERATOR=23;
-	public static final int NUMBER=24;
-	public static final int NUMERIC_LITERAL=25;
-	public static final int O_BRACE=26;
-	public static final int WHITESPACE=27;
+	public static final int DECIMAL=13;
+	public static final int FK_CALL=14;
+	public static final int FK_FUNCTION=15;
+	public static final int FK_RETURN=16;
+	public static final int FK_RETURNS=17;
+	public static final int FK_USES=18;
+	public static final int FK_WITH=19;
+	public static final int IDENTIFIER=20;
+	public static final int INTEGER=21;
+	public static final int MULTIPLYING_OPERATOR=22;
+	public static final int NUMBER=23;
+	public static final int O_BRACE=24;
+	public static final int STRING_LITERAL=25;
+	public static final int WHITESPACE=26;
 
 	// delegates
 	public Parser[] getDelegates() {
@@ -84,7 +88,7 @@ public class GKVParser extends Parser {
 			while (true) {
 				int alt1=3;
 				int LA1_0 = input.LA(1);
-				if ( (LA1_0==CK_IF||LA1_0==DATATYPE||LA1_0==FK_CALL||LA1_0==IDENTIFIER||LA1_0==30||LA1_0==34) ) {
+				if ( (LA1_0==CK_IF||LA1_0==FK_CALL||LA1_0==IDENTIFIER||LA1_0==29||(LA1_0 >= 31 && LA1_0 <= 33)||(LA1_0 >= 36 && LA1_0 <= 37)) ) {
 					alt1=1;
 				}
 				else if ( (LA1_0==FK_FUNCTION) ) {
@@ -95,7 +99,7 @@ public class GKVParser extends Parser {
 				case 1 :
 					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:16:12: sequenceOfStatements
 					{
-					pushFollow(FOLLOW_sequenceOfStatements_in_program51);
+					pushFollow(FOLLOW_sequenceOfStatements_in_program55);
 					sequenceOfStatements();
 					state._fsp--;
 
@@ -104,7 +108,7 @@ public class GKVParser extends Parser {
 				case 2 :
 					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:16:35: function
 					{
-					pushFollow(FOLLOW_function_in_program55);
+					pushFollow(FOLLOW_function_in_program59);
 					function();
 					state._fsp--;
 
@@ -152,7 +156,9 @@ public class GKVParser extends Parser {
 					alt2=1;
 					}
 					break;
-				case DATATYPE:
+				case 31:
+				case 32:
+				case 33:
 					{
 					alt2=1;
 					}
@@ -162,7 +168,12 @@ public class GKVParser extends Parser {
 					alt2=1;
 					}
 					break;
-				case 30:
+				case 36:
+					{
+					alt2=1;
+					}
+					break;
+				case 29:
 					{
 					alt2=1;
 					}
@@ -172,7 +183,7 @@ public class GKVParser extends Parser {
 					alt2=2;
 					}
 					break;
-				case 34:
+				case 37:
 					{
 					alt2=2;
 					}
@@ -182,7 +193,7 @@ public class GKVParser extends Parser {
 				case 1 :
 					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:18:24: simpleStatement
 					{
-					pushFollow(FOLLOW_simpleStatement_in_sequenceOfStatements75);
+					pushFollow(FOLLOW_simpleStatement_in_sequenceOfStatements79);
 					simpleStatement();
 					state._fsp--;
 
@@ -191,7 +202,7 @@ public class GKVParser extends Parser {
 				case 2 :
 					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:18:42: compoundStatement
 					{
-					pushFollow(FOLLOW_compoundStatement_in_sequenceOfStatements79);
+					pushFollow(FOLLOW_compoundStatement_in_sequenceOfStatements83);
 					compoundStatement();
 					state._fsp--;
 
@@ -222,21 +233,23 @@ public class GKVParser extends Parser {
 
 
 	// $ANTLR start "simpleStatement"
-	// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:20:1: simpleStatement : ( assignmentStatement | declarationStatement | functionCall )? ';' ;
+	// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:20:1: simpleStatement : ( assignmentStatement | declarationStatement | functionCall | display )? ';' ;
 	public final void simpleStatement() throws RecognitionException {
 		try {
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:20:16: ( ( assignmentStatement | declarationStatement | functionCall )? ';' )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:20:18: ( assignmentStatement | declarationStatement | functionCall )? ';'
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:20:16: ( ( assignmentStatement | declarationStatement | functionCall | display )? ';' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:20:18: ( assignmentStatement | declarationStatement | functionCall | display )? ';'
 			{
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:20:18: ( assignmentStatement | declarationStatement | functionCall )?
-			int alt3=4;
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:20:18: ( assignmentStatement | declarationStatement | functionCall | display )?
+			int alt3=5;
 			switch ( input.LA(1) ) {
 				case IDENTIFIER:
 					{
 					alt3=1;
 					}
 					break;
-				case DATATYPE:
+				case 31:
+				case 32:
+				case 33:
 					{
 					alt3=2;
 					}
@@ -246,12 +259,17 @@ public class GKVParser extends Parser {
 					alt3=3;
 					}
 					break;
+				case 36:
+					{
+					alt3=4;
+					}
+					break;
 			}
 			switch (alt3) {
 				case 1 :
 					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:20:19: assignmentStatement
 					{
-					pushFollow(FOLLOW_assignmentStatement_in_simpleStatement90);
+					pushFollow(FOLLOW_assignmentStatement_in_simpleStatement94);
 					assignmentStatement();
 					state._fsp--;
 
@@ -260,7 +278,7 @@ public class GKVParser extends Parser {
 				case 2 :
 					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:20:41: declarationStatement
 					{
-					pushFollow(FOLLOW_declarationStatement_in_simpleStatement94);
+					pushFollow(FOLLOW_declarationStatement_in_simpleStatement98);
 					declarationStatement();
 					state._fsp--;
 
@@ -269,8 +287,17 @@ public class GKVParser extends Parser {
 				case 3 :
 					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:20:64: functionCall
 					{
-					pushFollow(FOLLOW_functionCall_in_simpleStatement98);
+					pushFollow(FOLLOW_functionCall_in_simpleStatement102);
 					functionCall();
+					state._fsp--;
+
+					}
+					break;
+				case 4 :
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:20:79: display
+					{
+					pushFollow(FOLLOW_display_in_simpleStatement106);
+					display();
 					state._fsp--;
 
 					}
@@ -278,7 +305,7 @@ public class GKVParser extends Parser {
 
 			}
 
-			match(input,30,FOLLOW_30_in_simpleStatement102); 
+			match(input,29,FOLLOW_29_in_simpleStatement110); 
 			}
 
 		}
@@ -304,7 +331,7 @@ public class GKVParser extends Parser {
 			if ( (LA4_0==CK_IF) ) {
 				alt4=1;
 			}
-			else if ( (LA4_0==34) ) {
+			else if ( (LA4_0==37) ) {
 				alt4=2;
 			}
 
@@ -318,7 +345,7 @@ public class GKVParser extends Parser {
 				case 1 :
 					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:22:20: ifStatement
 					{
-					pushFollow(FOLLOW_ifStatement_in_compoundStatement109);
+					pushFollow(FOLLOW_ifStatement_in_compoundStatement117);
 					ifStatement();
 					state._fsp--;
 
@@ -327,7 +354,7 @@ public class GKVParser extends Parser {
 				case 2 :
 					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:22:34: loop
 					{
-					pushFollow(FOLLOW_loop_in_compoundStatement113);
+					pushFollow(FOLLOW_loop_in_compoundStatement121);
 					loop();
 					state._fsp--;
 
@@ -355,9 +382,9 @@ public class GKVParser extends Parser {
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:24:20: ( IDENTIFIER 'is' expression )
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:24:22: IDENTIFIER 'is' expression
 			{
-			match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_assignmentStatement120); 
-			match(input,32,FOLLOW_32_in_assignmentStatement122); 
-			pushFollow(FOLLOW_expression_in_assignmentStatement124);
+			match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_assignmentStatement128); 
+			match(input,34,FOLLOW_34_in_assignmentStatement130); 
+			pushFollow(FOLLOW_expression_in_assignmentStatement132);
 			expression();
 			state._fsp--;
 
@@ -383,18 +410,18 @@ public class GKVParser extends Parser {
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:26:13: ( CK_IF condition CK_THEN O_BRACE sequenceOfStatements C_BRACE ( CK_ELSE O_BRACE sequenceOfStatements C_BRACE )? )
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:26:15: CK_IF condition CK_THEN O_BRACE sequenceOfStatements C_BRACE ( CK_ELSE O_BRACE sequenceOfStatements C_BRACE )?
 			{
-			match(input,CK_IF,FOLLOW_CK_IF_in_ifStatement132); 
-			pushFollow(FOLLOW_condition_in_ifStatement134);
+			match(input,CK_IF,FOLLOW_CK_IF_in_ifStatement140); 
+			pushFollow(FOLLOW_condition_in_ifStatement142);
 			condition();
 			state._fsp--;
 
-			match(input,CK_THEN,FOLLOW_CK_THEN_in_ifStatement136); 
-			match(input,O_BRACE,FOLLOW_O_BRACE_in_ifStatement138); 
-			pushFollow(FOLLOW_sequenceOfStatements_in_ifStatement155);
+			match(input,CK_THEN,FOLLOW_CK_THEN_in_ifStatement144); 
+			match(input,O_BRACE,FOLLOW_O_BRACE_in_ifStatement146); 
+			pushFollow(FOLLOW_sequenceOfStatements_in_ifStatement163);
 			sequenceOfStatements();
 			state._fsp--;
 
-			match(input,C_BRACE,FOLLOW_C_BRACE_in_ifStatement172); 
+			match(input,C_BRACE,FOLLOW_C_BRACE_in_ifStatement180); 
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:28:23: ( CK_ELSE O_BRACE sequenceOfStatements C_BRACE )?
 			int alt5=2;
 			int LA5_0 = input.LA(1);
@@ -405,13 +432,13 @@ public class GKVParser extends Parser {
 				case 1 :
 					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:28:24: CK_ELSE O_BRACE sequenceOfStatements C_BRACE
 					{
-					match(input,CK_ELSE,FOLLOW_CK_ELSE_in_ifStatement175); 
-					match(input,O_BRACE,FOLLOW_O_BRACE_in_ifStatement177); 
-					pushFollow(FOLLOW_sequenceOfStatements_in_ifStatement179);
+					match(input,CK_ELSE,FOLLOW_CK_ELSE_in_ifStatement183); 
+					match(input,O_BRACE,FOLLOW_O_BRACE_in_ifStatement185); 
+					pushFollow(FOLLOW_sequenceOfStatements_in_ifStatement187);
 					sequenceOfStatements();
 					state._fsp--;
 
-					match(input,C_BRACE,FOLLOW_C_BRACE_in_ifStatement181); 
+					match(input,C_BRACE,FOLLOW_C_BRACE_in_ifStatement189); 
 					}
 					break;
 
@@ -439,17 +466,17 @@ public class GKVParser extends Parser {
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:31:5: ( 'while' condition O_BRACE sequenceOfStatements C_BRACE )
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:31:7: 'while' condition O_BRACE sequenceOfStatements C_BRACE
 			{
-			match(input,34,FOLLOW_34_in_loop220); 
-			pushFollow(FOLLOW_condition_in_loop222);
+			match(input,37,FOLLOW_37_in_loop228); 
+			pushFollow(FOLLOW_condition_in_loop230);
 			condition();
 			state._fsp--;
 
-			match(input,O_BRACE,FOLLOW_O_BRACE_in_loop224); 
-			pushFollow(FOLLOW_sequenceOfStatements_in_loop227);
+			match(input,O_BRACE,FOLLOW_O_BRACE_in_loop232); 
+			pushFollow(FOLLOW_sequenceOfStatements_in_loop235);
 			sequenceOfStatements();
 			state._fsp--;
 
-			match(input,C_BRACE,FOLLOW_C_BRACE_in_loop229); 
+			match(input,C_BRACE,FOLLOW_C_BRACE_in_loop237); 
 			}
 
 		}
@@ -472,7 +499,7 @@ public class GKVParser extends Parser {
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:33:10: ( expression )
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:33:12: expression
 			{
-			pushFollow(FOLLOW_expression_in_condition242);
+			pushFollow(FOLLOW_expression_in_condition250);
 			expression();
 			state._fsp--;
 
@@ -498,7 +525,7 @@ public class GKVParser extends Parser {
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:35:12: ( relation ( 'and' relation | 'or' relation )* )
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:35:14: relation ( 'and' relation | 'or' relation )*
 			{
-			pushFollow(FOLLOW_relation_in_expression250);
+			pushFollow(FOLLOW_relation_in_expression258);
 			relation();
 			state._fsp--;
 
@@ -507,10 +534,10 @@ public class GKVParser extends Parser {
 			while (true) {
 				int alt6=3;
 				int LA6_0 = input.LA(1);
-				if ( (LA6_0==31) ) {
+				if ( (LA6_0==30) ) {
 					alt6=1;
 				}
-				else if ( (LA6_0==33) ) {
+				else if ( (LA6_0==35) ) {
 					alt6=2;
 				}
 
@@ -518,8 +545,8 @@ public class GKVParser extends Parser {
 				case 1 :
 					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:35:24: 'and' relation
 					{
-					match(input,31,FOLLOW_31_in_expression253); 
-					pushFollow(FOLLOW_relation_in_expression255);
+					match(input,30,FOLLOW_30_in_expression261); 
+					pushFollow(FOLLOW_relation_in_expression263);
 					relation();
 					state._fsp--;
 
@@ -528,8 +555,8 @@ public class GKVParser extends Parser {
 				case 2 :
 					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:35:41: 'or' relation
 					{
-					match(input,33,FOLLOW_33_in_expression259); 
-					pushFollow(FOLLOW_relation_in_expression261);
+					match(input,35,FOLLOW_35_in_expression267); 
+					pushFollow(FOLLOW_relation_in_expression269);
 					relation();
 					state._fsp--;
 
@@ -563,7 +590,7 @@ public class GKVParser extends Parser {
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:37:9: ( simpleExpression ( COMPK_KEYWORDS simpleExpression )? )
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:37:11: simpleExpression ( COMPK_KEYWORDS simpleExpression )?
 			{
-			pushFollow(FOLLOW_simpleExpression_in_relation270);
+			pushFollow(FOLLOW_simpleExpression_in_relation278);
 			simpleExpression();
 			state._fsp--;
 
@@ -577,8 +604,8 @@ public class GKVParser extends Parser {
 				case 1 :
 					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:37:29: COMPK_KEYWORDS simpleExpression
 					{
-					match(input,COMPK_KEYWORDS,FOLLOW_COMPK_KEYWORDS_in_relation273); 
-					pushFollow(FOLLOW_simpleExpression_in_relation275);
+					match(input,COMPK_KEYWORDS,FOLLOW_COMPK_KEYWORDS_in_relation281); 
+					pushFollow(FOLLOW_simpleExpression_in_relation283);
 					simpleExpression();
 					state._fsp--;
 
@@ -609,7 +636,7 @@ public class GKVParser extends Parser {
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:39:17: ( term ( ADDING_OPERATOR term )* )
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:39:19: term ( ADDING_OPERATOR term )*
 			{
-			pushFollow(FOLLOW_term_in_simpleExpression284);
+			pushFollow(FOLLOW_term_in_simpleExpression292);
 			term();
 			state._fsp--;
 
@@ -626,8 +653,8 @@ public class GKVParser extends Parser {
 				case 1 :
 					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:39:25: ADDING_OPERATOR term
 					{
-					match(input,ADDING_OPERATOR,FOLLOW_ADDING_OPERATOR_in_simpleExpression287); 
-					pushFollow(FOLLOW_term_in_simpleExpression289);
+					match(input,ADDING_OPERATOR,FOLLOW_ADDING_OPERATOR_in_simpleExpression295); 
+					pushFollow(FOLLOW_term_in_simpleExpression297);
 					term();
 					state._fsp--;
 
@@ -661,7 +688,7 @@ public class GKVParser extends Parser {
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:41:5: ( factor ( MULTIPLYING_OPERATOR factor )* )
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:41:7: factor ( MULTIPLYING_OPERATOR factor )*
 			{
-			pushFollow(FOLLOW_factor_in_term298);
+			pushFollow(FOLLOW_factor_in_term306);
 			factor();
 			state._fsp--;
 
@@ -678,8 +705,8 @@ public class GKVParser extends Parser {
 				case 1 :
 					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:41:15: MULTIPLYING_OPERATOR factor
 					{
-					match(input,MULTIPLYING_OPERATOR,FOLLOW_MULTIPLYING_OPERATOR_in_term301); 
-					pushFollow(FOLLOW_factor_in_term303);
+					match(input,MULTIPLYING_OPERATOR,FOLLOW_MULTIPLYING_OPERATOR_in_term309); 
+					pushFollow(FOLLOW_factor_in_term311);
 					factor();
 					state._fsp--;
 
@@ -707,28 +734,33 @@ public class GKVParser extends Parser {
 
 
 	// $ANTLR start "factor"
-	// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:43:1: factor : ( NUMERIC_LITERAL | IDENTIFIER | '(' expression ')' ) ;
+	// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:43:1: factor : ( INTEGER | DECIMAL | IDENTIFIER | '(' expression ')' ) ;
 	public final void factor() throws RecognitionException {
 		try {
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:43:8: ( ( NUMERIC_LITERAL | IDENTIFIER | '(' expression ')' ) )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:43:10: ( NUMERIC_LITERAL | IDENTIFIER | '(' expression ')' )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:43:8: ( ( INTEGER | DECIMAL | IDENTIFIER | '(' expression ')' ) )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:43:10: ( INTEGER | DECIMAL | IDENTIFIER | '(' expression ')' )
 			{
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:43:10: ( NUMERIC_LITERAL | IDENTIFIER | '(' expression ')' )
-			int alt10=3;
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:43:10: ( INTEGER | DECIMAL | IDENTIFIER | '(' expression ')' )
+			int alt10=4;
 			switch ( input.LA(1) ) {
-			case NUMERIC_LITERAL:
+			case INTEGER:
 				{
 				alt10=1;
 				}
 				break;
-			case IDENTIFIER:
+			case DECIMAL:
 				{
 				alt10=2;
 				}
 				break;
-			case 28:
+			case IDENTIFIER:
 				{
 				alt10=3;
+				}
+				break;
+			case 27:
+				{
+				alt10=4;
 				}
 				break;
 			default:
@@ -738,26 +770,32 @@ public class GKVParser extends Parser {
 			}
 			switch (alt10) {
 				case 1 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:43:11: NUMERIC_LITERAL
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:43:11: INTEGER
 					{
-					match(input,NUMERIC_LITERAL,FOLLOW_NUMERIC_LITERAL_in_factor315); 
+					match(input,INTEGER,FOLLOW_INTEGER_in_factor324); 
 					}
 					break;
 				case 2 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:43:29: IDENTIFIER
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:43:21: DECIMAL
 					{
-					match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_factor319); 
+					match(input,DECIMAL,FOLLOW_DECIMAL_in_factor328); 
 					}
 					break;
 				case 3 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:43:42: '(' expression ')'
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:43:31: IDENTIFIER
 					{
-					match(input,28,FOLLOW_28_in_factor323); 
-					pushFollow(FOLLOW_expression_in_factor325);
+					match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_factor332); 
+					}
+					break;
+				case 4 :
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:43:44: '(' expression ')'
+					{
+					match(input,27,FOLLOW_27_in_factor336); 
+					pushFollow(FOLLOW_expression_in_factor338);
 					expression();
 					state._fsp--;
 
-					match(input,29,FOLLOW_29_in_factor327); 
+					match(input,28,FOLLOW_28_in_factor340); 
 					}
 					break;
 
@@ -779,23 +817,23 @@ public class GKVParser extends Parser {
 
 
 	// $ANTLR start "declarationStatement"
-	// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:45:1: declarationStatement : ( DATATYPE IDENTIFIER ( COMMA IDENTIFIER )* | DATATYPE IDENTIFIER 'is' expression ( COMMA IDENTIFIER 'is' expression )* ) ;
+	// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:45:1: declarationStatement : ( datatype IDENTIFIER ( COMMA IDENTIFIER )* | datatype IDENTIFIER 'is' expression ( COMMA IDENTIFIER 'is' expression )* ) ;
 	public final void declarationStatement() throws RecognitionException {
 		try {
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:45:21: ( ( DATATYPE IDENTIFIER ( COMMA IDENTIFIER )* | DATATYPE IDENTIFIER 'is' expression ( COMMA IDENTIFIER 'is' expression )* ) )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:45:23: ( DATATYPE IDENTIFIER ( COMMA IDENTIFIER )* | DATATYPE IDENTIFIER 'is' expression ( COMMA IDENTIFIER 'is' expression )* )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:45:21: ( ( datatype IDENTIFIER ( COMMA IDENTIFIER )* | datatype IDENTIFIER 'is' expression ( COMMA IDENTIFIER 'is' expression )* ) )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:45:23: ( datatype IDENTIFIER ( COMMA IDENTIFIER )* | datatype IDENTIFIER 'is' expression ( COMMA IDENTIFIER 'is' expression )* )
 			{
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:45:23: ( DATATYPE IDENTIFIER ( COMMA IDENTIFIER )* | DATATYPE IDENTIFIER 'is' expression ( COMMA IDENTIFIER 'is' expression )* )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:45:23: ( datatype IDENTIFIER ( COMMA IDENTIFIER )* | datatype IDENTIFIER 'is' expression ( COMMA IDENTIFIER 'is' expression )* )
 			int alt13=2;
 			int LA13_0 = input.LA(1);
-			if ( (LA13_0==DATATYPE) ) {
+			if ( ((LA13_0 >= 31 && LA13_0 <= 33)) ) {
 				int LA13_1 = input.LA(2);
 				if ( (LA13_1==IDENTIFIER) ) {
 					int LA13_2 = input.LA(3);
-					if ( (LA13_2==32) ) {
+					if ( (LA13_2==34) ) {
 						alt13=2;
 					}
-					else if ( (LA13_2==COMMA||LA13_2==30) ) {
+					else if ( (LA13_2==COMMA||LA13_2==29) ) {
 						alt13=1;
 					}
 
@@ -837,10 +875,13 @@ public class GKVParser extends Parser {
 
 			switch (alt13) {
 				case 1 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:45:24: DATATYPE IDENTIFIER ( COMMA IDENTIFIER )*
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:45:24: datatype IDENTIFIER ( COMMA IDENTIFIER )*
 					{
-					match(input,DATATYPE,FOLLOW_DATATYPE_in_declarationStatement336); 
-					match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_declarationStatement338); 
+					pushFollow(FOLLOW_datatype_in_declarationStatement349);
+					datatype();
+					state._fsp--;
+
+					match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_declarationStatement351); 
 					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:45:44: ( COMMA IDENTIFIER )*
 					loop11:
 					while (true) {
@@ -854,8 +895,8 @@ public class GKVParser extends Parser {
 						case 1 :
 							// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:45:45: COMMA IDENTIFIER
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_declarationStatement341); 
-							match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_declarationStatement343); 
+							match(input,COMMA,FOLLOW_COMMA_in_declarationStatement354); 
+							match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_declarationStatement356); 
 							}
 							break;
 
@@ -867,12 +908,15 @@ public class GKVParser extends Parser {
 					}
 					break;
 				case 2 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:45:65: DATATYPE IDENTIFIER 'is' expression ( COMMA IDENTIFIER 'is' expression )*
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:45:65: datatype IDENTIFIER 'is' expression ( COMMA IDENTIFIER 'is' expression )*
 					{
-					match(input,DATATYPE,FOLLOW_DATATYPE_in_declarationStatement348); 
-					match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_declarationStatement350); 
-					match(input,32,FOLLOW_32_in_declarationStatement352); 
-					pushFollow(FOLLOW_expression_in_declarationStatement354);
+					pushFollow(FOLLOW_datatype_in_declarationStatement361);
+					datatype();
+					state._fsp--;
+
+					match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_declarationStatement363); 
+					match(input,34,FOLLOW_34_in_declarationStatement365); 
+					pushFollow(FOLLOW_expression_in_declarationStatement367);
 					expression();
 					state._fsp--;
 
@@ -889,10 +933,10 @@ public class GKVParser extends Parser {
 						case 1 :
 							// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:45:102: COMMA IDENTIFIER 'is' expression
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_declarationStatement357); 
-							match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_declarationStatement359); 
-							match(input,32,FOLLOW_32_in_declarationStatement361); 
-							pushFollow(FOLLOW_expression_in_declarationStatement363);
+							match(input,COMMA,FOLLOW_COMMA_in_declarationStatement370); 
+							match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_declarationStatement372); 
+							match(input,34,FOLLOW_34_in_declarationStatement374); 
+							pushFollow(FOLLOW_expression_in_declarationStatement376);
 							expression();
 							state._fsp--;
 
@@ -931,8 +975,8 @@ public class GKVParser extends Parser {
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:47:13: ( FK_CALL IDENTIFIER ( FK_WITH parameters )? )
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:47:15: FK_CALL IDENTIFIER ( FK_WITH parameters )?
 			{
-			match(input,FK_CALL,FOLLOW_FK_CALL_in_functionCall374); 
-			match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_functionCall376); 
+			match(input,FK_CALL,FOLLOW_FK_CALL_in_functionCall387); 
+			match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_functionCall389); 
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:47:34: ( FK_WITH parameters )?
 			int alt14=2;
 			int LA14_0 = input.LA(1);
@@ -943,8 +987,8 @@ public class GKVParser extends Parser {
 				case 1 :
 					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:47:35: FK_WITH parameters
 					{
-					match(input,FK_WITH,FOLLOW_FK_WITH_in_functionCall379); 
-					pushFollow(FOLLOW_parameters_in_functionCall381);
+					match(input,FK_WITH,FOLLOW_FK_WITH_in_functionCall392); 
+					pushFollow(FOLLOW_parameters_in_functionCall394);
 					parameters();
 					state._fsp--;
 
@@ -975,7 +1019,7 @@ public class GKVParser extends Parser {
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:49:11: ( expression ( COMMA expression )* )
 			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:49:13: expression ( COMMA expression )*
 			{
-			pushFollow(FOLLOW_expression_in_parameters390);
+			pushFollow(FOLLOW_expression_in_parameters403);
 			expression();
 			state._fsp--;
 
@@ -992,8 +1036,8 @@ public class GKVParser extends Parser {
 				case 1 :
 					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:49:25: COMMA expression
 					{
-					match(input,COMMA,FOLLOW_COMMA_in_parameters393); 
-					pushFollow(FOLLOW_expression_in_parameters395);
+					match(input,COMMA,FOLLOW_COMMA_in_parameters406); 
+					pushFollow(FOLLOW_expression_in_parameters408);
 					expression();
 					state._fsp--;
 
@@ -1021,15 +1065,15 @@ public class GKVParser extends Parser {
 
 
 	// $ANTLR start "function"
-	// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:51:1: function : FK_FUNCTION IDENTIFIER ( FK_USES DATATYPE IDENTIFIER ( COMMA DATATYPE IDENTIFIER )* )? FK_RETURNS DATATYPE O_BRACE sequenceOfStatements ( FK_RETURN expression ';' )? C_BRACE ;
+	// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:51:1: function : FK_FUNCTION IDENTIFIER ( FK_USES datatype IDENTIFIER ( COMMA datatype IDENTIFIER )* )? FK_RETURNS datatype O_BRACE sequenceOfStatements FK_RETURN expression ';' C_BRACE ;
 	public final void function() throws RecognitionException {
 		try {
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:51:10: ( FK_FUNCTION IDENTIFIER ( FK_USES DATATYPE IDENTIFIER ( COMMA DATATYPE IDENTIFIER )* )? FK_RETURNS DATATYPE O_BRACE sequenceOfStatements ( FK_RETURN expression ';' )? C_BRACE )
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:52:11: FK_FUNCTION IDENTIFIER ( FK_USES DATATYPE IDENTIFIER ( COMMA DATATYPE IDENTIFIER )* )? FK_RETURNS DATATYPE O_BRACE sequenceOfStatements ( FK_RETURN expression ';' )? C_BRACE
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:51:10: ( FK_FUNCTION IDENTIFIER ( FK_USES datatype IDENTIFIER ( COMMA datatype IDENTIFIER )* )? FK_RETURNS datatype O_BRACE sequenceOfStatements FK_RETURN expression ';' C_BRACE )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:52:11: FK_FUNCTION IDENTIFIER ( FK_USES datatype IDENTIFIER ( COMMA datatype IDENTIFIER )* )? FK_RETURNS datatype O_BRACE sequenceOfStatements FK_RETURN expression ';' C_BRACE
 			{
-			match(input,FK_FUNCTION,FOLLOW_FK_FUNCTION_in_function415); 
-			match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_function417); 
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:52:34: ( FK_USES DATATYPE IDENTIFIER ( COMMA DATATYPE IDENTIFIER )* )?
+			match(input,FK_FUNCTION,FOLLOW_FK_FUNCTION_in_function428); 
+			match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_function430); 
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:52:34: ( FK_USES datatype IDENTIFIER ( COMMA datatype IDENTIFIER )* )?
 			int alt17=2;
 			int LA17_0 = input.LA(1);
 			if ( (LA17_0==FK_USES) ) {
@@ -1037,12 +1081,15 @@ public class GKVParser extends Parser {
 			}
 			switch (alt17) {
 				case 1 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:52:35: FK_USES DATATYPE IDENTIFIER ( COMMA DATATYPE IDENTIFIER )*
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:52:35: FK_USES datatype IDENTIFIER ( COMMA datatype IDENTIFIER )*
 					{
-					match(input,FK_USES,FOLLOW_FK_USES_in_function420); 
-					match(input,DATATYPE,FOLLOW_DATATYPE_in_function422); 
-					match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_function424); 
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:52:63: ( COMMA DATATYPE IDENTIFIER )*
+					match(input,FK_USES,FOLLOW_FK_USES_in_function433); 
+					pushFollow(FOLLOW_datatype_in_function435);
+					datatype();
+					state._fsp--;
+
+					match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_function437); 
+					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:52:63: ( COMMA datatype IDENTIFIER )*
 					loop16:
 					while (true) {
 						int alt16=2;
@@ -1053,11 +1100,14 @@ public class GKVParser extends Parser {
 
 						switch (alt16) {
 						case 1 :
-							// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:52:64: COMMA DATATYPE IDENTIFIER
+							// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:52:64: COMMA datatype IDENTIFIER
 							{
-							match(input,COMMA,FOLLOW_COMMA_in_function427); 
-							match(input,DATATYPE,FOLLOW_DATATYPE_in_function429); 
-							match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_function431); 
+							match(input,COMMA,FOLLOW_COMMA_in_function440); 
+							pushFollow(FOLLOW_datatype_in_function442);
+							datatype();
+							state._fsp--;
+
+							match(input,IDENTIFIER,FOLLOW_IDENTIFIER_in_function444); 
 							}
 							break;
 
@@ -1071,35 +1121,23 @@ public class GKVParser extends Parser {
 
 			}
 
-			match(input,FK_RETURNS,FOLLOW_FK_RETURNS_in_function437); 
-			match(input,DATATYPE,FOLLOW_DATATYPE_in_function439); 
-			match(input,O_BRACE,FOLLOW_O_BRACE_in_function451); 
-			pushFollow(FOLLOW_sequenceOfStatements_in_function464);
+			match(input,FK_RETURNS,FOLLOW_FK_RETURNS_in_function450); 
+			pushFollow(FOLLOW_datatype_in_function452);
+			datatype();
+			state._fsp--;
+
+			match(input,O_BRACE,FOLLOW_O_BRACE_in_function464); 
+			pushFollow(FOLLOW_sequenceOfStatements_in_function477);
 			sequenceOfStatements();
 			state._fsp--;
 
-			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:55:11: ( FK_RETURN expression ';' )?
-			int alt18=2;
-			int LA18_0 = input.LA(1);
-			if ( (LA18_0==FK_RETURN) ) {
-				alt18=1;
-			}
-			switch (alt18) {
-				case 1 :
-					// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:55:12: FK_RETURN expression ';'
-					{
-					match(input,FK_RETURN,FOLLOW_FK_RETURN_in_function477); 
-					pushFollow(FOLLOW_expression_in_function479);
-					expression();
-					state._fsp--;
+			match(input,FK_RETURN,FOLLOW_FK_RETURN_in_function489); 
+			pushFollow(FOLLOW_expression_in_function491);
+			expression();
+			state._fsp--;
 
-					match(input,30,FOLLOW_30_in_function481); 
-					}
-					break;
-
-			}
-
-			match(input,C_BRACE,FOLLOW_C_BRACE_in_function495); 
+			match(input,29,FOLLOW_29_in_function493); 
+			match(input,C_BRACE,FOLLOW_C_BRACE_in_function505); 
 			}
 
 		}
@@ -1113,91 +1151,156 @@ public class GKVParser extends Parser {
 	}
 	// $ANTLR end "function"
 
+
+
+	// $ANTLR start "display"
+	// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:59:1: display : 'show' ( STRING_LITERAL | INTEGER | DECIMAL | IDENTIFIER ) ;
+	public final void display() throws RecognitionException {
+		try {
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:59:8: ( 'show' ( STRING_LITERAL | INTEGER | DECIMAL | IDENTIFIER ) )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:59:10: 'show' ( STRING_LITERAL | INTEGER | DECIMAL | IDENTIFIER )
+			{
+			match(input,36,FOLLOW_36_in_display533); 
+			if ( input.LA(1)==DECIMAL||(input.LA(1) >= IDENTIFIER && input.LA(1) <= INTEGER)||input.LA(1)==STRING_LITERAL ) {
+				input.consume();
+				state.errorRecovery=false;
+			}
+			else {
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				throw mse;
+			}
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "display"
+
+
+
+	// $ANTLR start "datatype"
+	// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:75:1: datatype : ( 'integer' | 'decimal' | 'boolean' ) ;
+	public final void datatype() throws RecognitionException {
+		try {
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:75:9: ( ( 'integer' | 'decimal' | 'boolean' ) )
+			// /home/gowtham/CompilerDesign/workspace/GKV/src/edu/asu/msse/gkv/GKV.g:
+			{
+			if ( (input.LA(1) >= 31 && input.LA(1) <= 33) ) {
+				input.consume();
+				state.errorRecovery=false;
+			}
+			else {
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				throw mse;
+			}
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "datatype"
+
 	// Delegated rules
 
 
 
-	public static final BitSet FOLLOW_sequenceOfStatements_in_program51 = new BitSet(new long[]{0x000000044021A102L});
-	public static final BitSet FOLLOW_function_in_program55 = new BitSet(new long[]{0x000000044021A102L});
-	public static final BitSet FOLLOW_simpleStatement_in_sequenceOfStatements75 = new BitSet(new long[]{0x000000044020A102L});
-	public static final BitSet FOLLOW_compoundStatement_in_sequenceOfStatements79 = new BitSet(new long[]{0x000000044020A102L});
-	public static final BitSet FOLLOW_assignmentStatement_in_simpleStatement90 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_declarationStatement_in_simpleStatement94 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_functionCall_in_simpleStatement98 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_30_in_simpleStatement102 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ifStatement_in_compoundStatement109 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_loop_in_compoundStatement113 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_IDENTIFIER_in_assignmentStatement120 = new BitSet(new long[]{0x0000000100000000L});
-	public static final BitSet FOLLOW_32_in_assignmentStatement122 = new BitSet(new long[]{0x0000000012200000L});
-	public static final BitSet FOLLOW_expression_in_assignmentStatement124 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CK_IF_in_ifStatement132 = new BitSet(new long[]{0x0000000012200000L});
-	public static final BitSet FOLLOW_condition_in_ifStatement134 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_CK_THEN_in_ifStatement136 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_O_BRACE_in_ifStatement138 = new BitSet(new long[]{0x000000044020A100L});
-	public static final BitSet FOLLOW_sequenceOfStatements_in_ifStatement155 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_C_BRACE_in_ifStatement172 = new BitSet(new long[]{0x0000000000000042L});
-	public static final BitSet FOLLOW_CK_ELSE_in_ifStatement175 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_O_BRACE_in_ifStatement177 = new BitSet(new long[]{0x000000044020A100L});
-	public static final BitSet FOLLOW_sequenceOfStatements_in_ifStatement179 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_C_BRACE_in_ifStatement181 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_34_in_loop220 = new BitSet(new long[]{0x0000000012200000L});
-	public static final BitSet FOLLOW_condition_in_loop222 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_O_BRACE_in_loop224 = new BitSet(new long[]{0x000000044020A100L});
-	public static final BitSet FOLLOW_sequenceOfStatements_in_loop227 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_C_BRACE_in_loop229 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expression_in_condition242 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_relation_in_expression250 = new BitSet(new long[]{0x0000000280000002L});
-	public static final BitSet FOLLOW_31_in_expression253 = new BitSet(new long[]{0x0000000012200000L});
-	public static final BitSet FOLLOW_relation_in_expression255 = new BitSet(new long[]{0x0000000280000002L});
-	public static final BitSet FOLLOW_33_in_expression259 = new BitSet(new long[]{0x0000000012200000L});
-	public static final BitSet FOLLOW_relation_in_expression261 = new BitSet(new long[]{0x0000000280000002L});
-	public static final BitSet FOLLOW_simpleExpression_in_relation270 = new BitSet(new long[]{0x0000000000000802L});
-	public static final BitSet FOLLOW_COMPK_KEYWORDS_in_relation273 = new BitSet(new long[]{0x0000000012200000L});
-	public static final BitSet FOLLOW_simpleExpression_in_relation275 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_term_in_simpleExpression284 = new BitSet(new long[]{0x0000000000000012L});
-	public static final BitSet FOLLOW_ADDING_OPERATOR_in_simpleExpression287 = new BitSet(new long[]{0x0000000012200000L});
-	public static final BitSet FOLLOW_term_in_simpleExpression289 = new BitSet(new long[]{0x0000000000000012L});
-	public static final BitSet FOLLOW_factor_in_term298 = new BitSet(new long[]{0x0000000000800002L});
-	public static final BitSet FOLLOW_MULTIPLYING_OPERATOR_in_term301 = new BitSet(new long[]{0x0000000012200000L});
-	public static final BitSet FOLLOW_factor_in_term303 = new BitSet(new long[]{0x0000000000800002L});
-	public static final BitSet FOLLOW_NUMERIC_LITERAL_in_factor315 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_IDENTIFIER_in_factor319 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_28_in_factor323 = new BitSet(new long[]{0x0000000012200000L});
-	public static final BitSet FOLLOW_expression_in_factor325 = new BitSet(new long[]{0x0000000020000000L});
-	public static final BitSet FOLLOW_29_in_factor327 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_DATATYPE_in_declarationStatement336 = new BitSet(new long[]{0x0000000000200000L});
-	public static final BitSet FOLLOW_IDENTIFIER_in_declarationStatement338 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_COMMA_in_declarationStatement341 = new BitSet(new long[]{0x0000000000200000L});
-	public static final BitSet FOLLOW_IDENTIFIER_in_declarationStatement343 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_DATATYPE_in_declarationStatement348 = new BitSet(new long[]{0x0000000000200000L});
-	public static final BitSet FOLLOW_IDENTIFIER_in_declarationStatement350 = new BitSet(new long[]{0x0000000100000000L});
-	public static final BitSet FOLLOW_32_in_declarationStatement352 = new BitSet(new long[]{0x0000000012200000L});
-	public static final BitSet FOLLOW_expression_in_declarationStatement354 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_COMMA_in_declarationStatement357 = new BitSet(new long[]{0x0000000000200000L});
-	public static final BitSet FOLLOW_IDENTIFIER_in_declarationStatement359 = new BitSet(new long[]{0x0000000100000000L});
-	public static final BitSet FOLLOW_32_in_declarationStatement361 = new BitSet(new long[]{0x0000000012200000L});
-	public static final BitSet FOLLOW_expression_in_declarationStatement363 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_FK_CALL_in_functionCall374 = new BitSet(new long[]{0x0000000000200000L});
-	public static final BitSet FOLLOW_IDENTIFIER_in_functionCall376 = new BitSet(new long[]{0x0000000000100002L});
-	public static final BitSet FOLLOW_FK_WITH_in_functionCall379 = new BitSet(new long[]{0x0000000012200000L});
-	public static final BitSet FOLLOW_parameters_in_functionCall381 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expression_in_parameters390 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_COMMA_in_parameters393 = new BitSet(new long[]{0x0000000012200000L});
-	public static final BitSet FOLLOW_expression_in_parameters395 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_FK_FUNCTION_in_function415 = new BitSet(new long[]{0x0000000000200000L});
-	public static final BitSet FOLLOW_IDENTIFIER_in_function417 = new BitSet(new long[]{0x00000000000C0000L});
-	public static final BitSet FOLLOW_FK_USES_in_function420 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_DATATYPE_in_function422 = new BitSet(new long[]{0x0000000000200000L});
-	public static final BitSet FOLLOW_IDENTIFIER_in_function424 = new BitSet(new long[]{0x0000000000040400L});
-	public static final BitSet FOLLOW_COMMA_in_function427 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_DATATYPE_in_function429 = new BitSet(new long[]{0x0000000000200000L});
-	public static final BitSet FOLLOW_IDENTIFIER_in_function431 = new BitSet(new long[]{0x0000000000040400L});
-	public static final BitSet FOLLOW_FK_RETURNS_in_function437 = new BitSet(new long[]{0x0000000000002000L});
-	public static final BitSet FOLLOW_DATATYPE_in_function439 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_O_BRACE_in_function451 = new BitSet(new long[]{0x000000044020A100L});
-	public static final BitSet FOLLOW_sequenceOfStatements_in_function464 = new BitSet(new long[]{0x0000000000021000L});
-	public static final BitSet FOLLOW_FK_RETURN_in_function477 = new BitSet(new long[]{0x0000000012200000L});
-	public static final BitSet FOLLOW_expression_in_function479 = new BitSet(new long[]{0x0000000040000000L});
-	public static final BitSet FOLLOW_30_in_function481 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_C_BRACE_in_function495 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_sequenceOfStatements_in_program55 = new BitSet(new long[]{0x00000033A010C102L});
+	public static final BitSet FOLLOW_function_in_program59 = new BitSet(new long[]{0x00000033A010C102L});
+	public static final BitSet FOLLOW_simpleStatement_in_sequenceOfStatements79 = new BitSet(new long[]{0x00000033A0104102L});
+	public static final BitSet FOLLOW_compoundStatement_in_sequenceOfStatements83 = new BitSet(new long[]{0x00000033A0104102L});
+	public static final BitSet FOLLOW_assignmentStatement_in_simpleStatement94 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_declarationStatement_in_simpleStatement98 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_functionCall_in_simpleStatement102 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_display_in_simpleStatement106 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_simpleStatement110 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_ifStatement_in_compoundStatement117 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_loop_in_compoundStatement121 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_IDENTIFIER_in_assignmentStatement128 = new BitSet(new long[]{0x0000000400000000L});
+	public static final BitSet FOLLOW_34_in_assignmentStatement130 = new BitSet(new long[]{0x0000000008302000L});
+	public static final BitSet FOLLOW_expression_in_assignmentStatement132 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CK_IF_in_ifStatement140 = new BitSet(new long[]{0x0000000008302000L});
+	public static final BitSet FOLLOW_condition_in_ifStatement142 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_CK_THEN_in_ifStatement144 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_O_BRACE_in_ifStatement146 = new BitSet(new long[]{0x00000033A0104100L});
+	public static final BitSet FOLLOW_sequenceOfStatements_in_ifStatement163 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_C_BRACE_in_ifStatement180 = new BitSet(new long[]{0x0000000000000042L});
+	public static final BitSet FOLLOW_CK_ELSE_in_ifStatement183 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_O_BRACE_in_ifStatement185 = new BitSet(new long[]{0x00000033A0104100L});
+	public static final BitSet FOLLOW_sequenceOfStatements_in_ifStatement187 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_C_BRACE_in_ifStatement189 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_37_in_loop228 = new BitSet(new long[]{0x0000000008302000L});
+	public static final BitSet FOLLOW_condition_in_loop230 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_O_BRACE_in_loop232 = new BitSet(new long[]{0x00000033A0104100L});
+	public static final BitSet FOLLOW_sequenceOfStatements_in_loop235 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_C_BRACE_in_loop237 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expression_in_condition250 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_relation_in_expression258 = new BitSet(new long[]{0x0000000840000002L});
+	public static final BitSet FOLLOW_30_in_expression261 = new BitSet(new long[]{0x0000000008302000L});
+	public static final BitSet FOLLOW_relation_in_expression263 = new BitSet(new long[]{0x0000000840000002L});
+	public static final BitSet FOLLOW_35_in_expression267 = new BitSet(new long[]{0x0000000008302000L});
+	public static final BitSet FOLLOW_relation_in_expression269 = new BitSet(new long[]{0x0000000840000002L});
+	public static final BitSet FOLLOW_simpleExpression_in_relation278 = new BitSet(new long[]{0x0000000000000802L});
+	public static final BitSet FOLLOW_COMPK_KEYWORDS_in_relation281 = new BitSet(new long[]{0x0000000008302000L});
+	public static final BitSet FOLLOW_simpleExpression_in_relation283 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_term_in_simpleExpression292 = new BitSet(new long[]{0x0000000000000012L});
+	public static final BitSet FOLLOW_ADDING_OPERATOR_in_simpleExpression295 = new BitSet(new long[]{0x0000000008302000L});
+	public static final BitSet FOLLOW_term_in_simpleExpression297 = new BitSet(new long[]{0x0000000000000012L});
+	public static final BitSet FOLLOW_factor_in_term306 = new BitSet(new long[]{0x0000000000400002L});
+	public static final BitSet FOLLOW_MULTIPLYING_OPERATOR_in_term309 = new BitSet(new long[]{0x0000000008302000L});
+	public static final BitSet FOLLOW_factor_in_term311 = new BitSet(new long[]{0x0000000000400002L});
+	public static final BitSet FOLLOW_INTEGER_in_factor324 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_DECIMAL_in_factor328 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_IDENTIFIER_in_factor332 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_27_in_factor336 = new BitSet(new long[]{0x0000000008302000L});
+	public static final BitSet FOLLOW_expression_in_factor338 = new BitSet(new long[]{0x0000000010000000L});
+	public static final BitSet FOLLOW_28_in_factor340 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_datatype_in_declarationStatement349 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_IDENTIFIER_in_declarationStatement351 = new BitSet(new long[]{0x0000000000000402L});
+	public static final BitSet FOLLOW_COMMA_in_declarationStatement354 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_IDENTIFIER_in_declarationStatement356 = new BitSet(new long[]{0x0000000000000402L});
+	public static final BitSet FOLLOW_datatype_in_declarationStatement361 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_IDENTIFIER_in_declarationStatement363 = new BitSet(new long[]{0x0000000400000000L});
+	public static final BitSet FOLLOW_34_in_declarationStatement365 = new BitSet(new long[]{0x0000000008302000L});
+	public static final BitSet FOLLOW_expression_in_declarationStatement367 = new BitSet(new long[]{0x0000000000000402L});
+	public static final BitSet FOLLOW_COMMA_in_declarationStatement370 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_IDENTIFIER_in_declarationStatement372 = new BitSet(new long[]{0x0000000400000000L});
+	public static final BitSet FOLLOW_34_in_declarationStatement374 = new BitSet(new long[]{0x0000000008302000L});
+	public static final BitSet FOLLOW_expression_in_declarationStatement376 = new BitSet(new long[]{0x0000000000000402L});
+	public static final BitSet FOLLOW_FK_CALL_in_functionCall387 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_IDENTIFIER_in_functionCall389 = new BitSet(new long[]{0x0000000000080002L});
+	public static final BitSet FOLLOW_FK_WITH_in_functionCall392 = new BitSet(new long[]{0x0000000008302000L});
+	public static final BitSet FOLLOW_parameters_in_functionCall394 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expression_in_parameters403 = new BitSet(new long[]{0x0000000000000402L});
+	public static final BitSet FOLLOW_COMMA_in_parameters406 = new BitSet(new long[]{0x0000000008302000L});
+	public static final BitSet FOLLOW_expression_in_parameters408 = new BitSet(new long[]{0x0000000000000402L});
+	public static final BitSet FOLLOW_FK_FUNCTION_in_function428 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_IDENTIFIER_in_function430 = new BitSet(new long[]{0x0000000000060000L});
+	public static final BitSet FOLLOW_FK_USES_in_function433 = new BitSet(new long[]{0x0000000380000000L});
+	public static final BitSet FOLLOW_datatype_in_function435 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_IDENTIFIER_in_function437 = new BitSet(new long[]{0x0000000000020400L});
+	public static final BitSet FOLLOW_COMMA_in_function440 = new BitSet(new long[]{0x0000000380000000L});
+	public static final BitSet FOLLOW_datatype_in_function442 = new BitSet(new long[]{0x0000000000100000L});
+	public static final BitSet FOLLOW_IDENTIFIER_in_function444 = new BitSet(new long[]{0x0000000000020400L});
+	public static final BitSet FOLLOW_FK_RETURNS_in_function450 = new BitSet(new long[]{0x0000000380000000L});
+	public static final BitSet FOLLOW_datatype_in_function452 = new BitSet(new long[]{0x0000000001000000L});
+	public static final BitSet FOLLOW_O_BRACE_in_function464 = new BitSet(new long[]{0x00000033A0104100L});
+	public static final BitSet FOLLOW_sequenceOfStatements_in_function477 = new BitSet(new long[]{0x0000000000010000L});
+	public static final BitSet FOLLOW_FK_RETURN_in_function489 = new BitSet(new long[]{0x0000000008302000L});
+	public static final BitSet FOLLOW_expression_in_function491 = new BitSet(new long[]{0x0000000020000000L});
+	public static final BitSet FOLLOW_29_in_function493 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_C_BRACE_in_function505 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_36_in_display533 = new BitSet(new long[]{0x0000000002302000L});
+	public static final BitSet FOLLOW_set_in_display535 = new BitSet(new long[]{0x0000000000000002L});
 }
