@@ -5,11 +5,11 @@ options {
 }
 
 @parser:: header {
-  package edu.asu.msse.gkv;
+  //package edu.asu.msse.gkv;
 }
 
 @lexer::header {
-  package edu.asu.msse.gkv;
+  //package edu.asu.msse.gkv;
 }
 
 program 
@@ -100,7 +100,7 @@ factor
 	;
 
 declarationStatement
-	:	(datatype IDENTIFIER (COMMA IDENTIFIER)*| datatype IDENTIFIER ASSIGNMENT_SYMBOL expression (COMMA IDENTIFIER ASSIGNMENT_SYMBOL expression)*) ;
+	:	(DATATYPE IDENTIFIER (COMMA IDENTIFIER)*| DATATYPE IDENTIFIER ASSIGNMENT_SYMBOL expression (COMMA IDENTIFIER ASSIGNMENT_SYMBOL expression)*) ;
 
 functionCall
 	:	FK_CALL IDENTIFIER (FK_WITH parameters)?
@@ -111,12 +111,14 @@ parameters
 	;
 
 function 
-	: 	FK_FUNCTION IDENTIFIER (FK_USES datatype IDENTIFIER (COMMA datatype IDENTIFIER)*)? FK_RETURNS datatype
+	: 	FK_FUNCTION IDENTIFIER (FK_USES idList)? FK_RETURNS DATATYPE
         O_BRACE 
         	sequenceOfStatements
           	FK_RETURN expression ';'
        	C_BRACE
     ;
+    
+idList: DATATYPE IDENTIFIER (COMMA DATATYPE IDENTIFIER)*;
 
 display
 	:	'show' (STRING_LITERAL | INTEGER_LITERAL | DECIMAL_LITERAL | IDENTIFIER)
@@ -142,7 +144,7 @@ BOOLEAN
 	:	('true' | 'false')
 	;
 	
-datatype
+DATATYPE
 	:	('integer' | 'decimal' | 'boolean')
 	;
 

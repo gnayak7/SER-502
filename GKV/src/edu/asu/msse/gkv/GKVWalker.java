@@ -25,6 +25,7 @@ package edu.asu.msse.gkv;
  */
 
 import java.io.PrintWriter;
+import java.util.Iterator;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -40,6 +41,7 @@ public class GKVWalker extends GKVBaseListener {
 	 * the High Level Language defined in the program.
 	 */
 	public StringBuilder stringBuilder;
+	public final String WHITESPACE = " ";
 	
 	/**
 	 * Constructor for the walker.
@@ -61,7 +63,7 @@ public class GKVWalker extends GKVBaseListener {
 	 */
 	@Override public void exitProgram(GKVParser.ProgramContext ctx) { 
 		String intermediateProgram = stringBuilder.toString();
-		
+		System.out.print(" Inside Exit Program \n ");
 		try {
 			PrintWriter writer = new PrintWriter(Constants.INTERMEDIATE_LANGUAGE_FILE_NAME, Constants.ENCODING);
 			writer.write(intermediateProgram);
@@ -75,7 +77,9 @@ public class GKVWalker extends GKVBaseListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterSequenceOfStatements(GKVParser.SequenceOfStatementsContext ctx) { }
+	@Override public void enterSequenceOfStatements(GKVParser.SequenceOfStatementsContext ctx) { 
+		
+	}
 	/**
 	 * {@inheritDoc}
 	 *
@@ -106,12 +110,23 @@ public class GKVWalker extends GKVBaseListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitCompoundStatement(GKVParser.CompoundStatementContext ctx) { }
+	
+	
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterAssignmentStatement(GKVParser.AssignmentStatementContext ctx) { }
+	@Override public void enterAssignmentStatement(GKVParser.AssignmentStatementContext ctx) { 
+		System.out.println(" Inside Assignment Entry \n");
+		
+		// Evaluate the expression and get the result 
+		// The do the below with result
+		 System.out.println("I am in expression block");
+		stringBuilder.append("SET ");
+		stringBuilder.append(ctx.IDENTIFIER().getText().toUpperCase() + " ");
+		stringBuilder.append(ctx.expression().getText() + "\n");
+	}
 	/**
 	 * {@inheritDoc}
 	 *
@@ -231,37 +246,61 @@ public class GKVWalker extends GKVBaseListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunctionCall(GKVParser.FunctionCallContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitFunctionCall(GKVParser.FunctionCallContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterParameters(GKVParser.ParametersContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
+	@Override public void enterFunctionCall(GKVParser.FunctionCallContext ctx) {
+		
+		
+		
+		
+	}
+	
+	@Override public void exitFunctionCall(GKVParser.FunctionCallContext ctx) { 
+		
+	}
+	
+	@Override public void enterIdList(GKVParser.IdListContext ctx) { 
+		int parameterCount = ctx.IDENTIFIER().size();
+		
+		if (parameterCount == 1) {
+			stringBuilder.append(ctx.DATATYPE(0).getText().toUpperCase() + WHITESPACE);
+			stringBuilder.append(ctx.IDENTIFIER(0).getText().toUpperCase() + WHITESPACE);
+		} else if (parameterCount > 1) {
+			Iterator<TerminalNode> idIterator = ctx.IDENTIFIER().iterator();
+			Iterator<TerminalNode> datatypeIterator = ctx.DATATYPE().iterator();
+			boolean hasNext = false;
+			do {
+				stringBuilder.append(datatypeIterator.next().getText().toUpperCase() + WHITESPACE);
+				stringBuilder.append(idIterator.next().getText().toUpperCase() + WHITESPACE);
+				hasNext = idIterator.hasNext();
+				// can add the has next checking for datatype.
+				if (hasNext) {
+					stringBuilder.append(",");
+				}
+			} while (hasNext);
+		}
+		stringBuilder.append("{");
+	}
+
+	@Override public void exitIdList(GKVParser.IdListContext ctx) { }
+	
+	@Override public void enterParameters(GKVParser.ParametersContext ctx) { 
+		
+	}
+
 	@Override public void exitParameters(GKVParser.ParametersContext ctx) { }
+	
+	@Override public void enterFunction(GKVParser.FunctionContext ctx) { 
+		stringBuilder.append("PROCEDURE ");
+		stringBuilder.append(ctx.DATATYPE().getText().toUpperCase() + WHITESPACE);
+		stringBuilder.append(ctx.IDENTIFIER().getText().toUpperCase() + " ");
+	}
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunction(GKVParser.FunctionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitFunction(GKVParser.FunctionContext ctx) { }
+	@Override public void exitFunction(GKVParser.FunctionContext ctx) { 
+		stringBuilder.append("\n}\r\n");
+	}
 	/**
 	 * {@inheritDoc}
 	 *
@@ -279,13 +318,7 @@ public class GKVWalker extends GKVBaseListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterDatatype(GKVParser.DatatypeContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitDatatype(GKVParser.DatatypeContext ctx) { }
+	
 
 	/**
 	 * {@inheritDoc}

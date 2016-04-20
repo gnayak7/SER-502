@@ -1,6 +1,7 @@
 // Generated from GKV.g4 by ANTLR 4.5.3
+package edu.asu.msse.gkv;
 
-  package edu.asu.msse.gkv;
+  //package edu.asu.msse.gkv;
 
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -180,6 +181,16 @@ public interface GKVListener extends ParseTreeListener {
 	 */
 	void exitFunction(GKVParser.FunctionContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link GKVParser#idList}.
+	 * @param ctx the parse tree
+	 */
+	void enterIdList(GKVParser.IdListContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GKVParser#idList}.
+	 * @param ctx the parse tree
+	 */
+	void exitIdList(GKVParser.IdListContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link GKVParser#display}.
 	 * @param ctx the parse tree
 	 */
@@ -189,14 +200,4 @@ public interface GKVListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitDisplay(GKVParser.DisplayContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link GKVParser#datatype}.
-	 * @param ctx the parse tree
-	 */
-	void enterDatatype(GKVParser.DatatypeContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link GKVParser#datatype}.
-	 * @param ctx the parse tree
-	 */
-	void exitDatatype(GKVParser.DatatypeContext ctx);
 }
